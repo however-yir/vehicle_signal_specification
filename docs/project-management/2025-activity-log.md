@@ -12,3 +12,4 @@
 | 3 | 2025-02-19 | Wednesday | init | #1 | Finalize initialization baseline checkpoint 03 | seed-2025-vehicle_signal_specification-03 |
 | 4 | 2025-03-16 | Sunday | core | #3 | Deliver core feature slice 04 | seed-2025-vehicle_signal_specification-04 |
 | 5 | 2025-04-07 | Monday | core | #4 | Deliver core feature slice 05 | seed-2025-vehicle_signal_specification-05 |
+| 6 | 2025-04-29 | Tuesday | core | #5 | Deliver core feature slice 06 | seed-2025-vehicle_signal_specification-06 |
