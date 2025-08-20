@@ -17,3 +17,4 @@
 | 8 | 2025-06-15 | Sunday | core | #4 | Deliver core feature slice 08 | seed-2025-vehicle_signal_specification-08 |
 | 9 | 2025-07-07 | Monday | core | #5 | Deliver core feature slice 09 | seed-2025-vehicle_signal_specification-09 |
 | 10 | 2025-07-29 | Tuesday | core | #3 | Deliver core feature slice 10 | seed-2025-vehicle_signal_specification-10 |
+| 11 | 2025-08-20 | Wednesday | core | #4 | Deliver core feature slice 11 | seed-2025-vehicle_signal_specification-11 |
