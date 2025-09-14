@@ -18,3 +18,4 @@
 | 9 | 2025-07-07 | Monday | core | #5 | Deliver core feature slice 09 | seed-2025-vehicle_signal_specification-09 |
 | 10 | 2025-07-29 | Tuesday | core | #3 | Deliver core feature slice 10 | seed-2025-vehicle_signal_specification-10 |
 | 11 | 2025-08-20 | Wednesday | core | #4 | Deliver core feature slice 11 | seed-2025-vehicle_signal_specification-11 |
+| 12 | 2025-09-14 | Sunday | fix | #6 | Apply fix and hardening patch 12 | seed-2025-vehicle_signal_specification-12 |
