@@ -21,3 +21,4 @@
 | 12 | 2025-09-14 | Sunday | fix | #6 | Apply fix and hardening patch 12 | seed-2025-vehicle_signal_specification-12 |
 | 13 | 2025-10-06 | Monday | fix | #6 | Apply fix and hardening patch 13 | seed-2025-vehicle_signal_specification-13 |
 | 14 | 2025-10-28 | Tuesday | test | #7 | Add regression/test evidence checkpoint 14 | seed-2025-vehicle_signal_specification-14 |
+| 15 | 2025-11-19 | Wednesday | test | #7 | Add regression/test evidence checkpoint 15 | seed-2025-vehicle_signal_specification-15 |
