@@ -23,3 +23,4 @@
 | 14 | 2025-10-28 | Tuesday | test | #7 | Add regression/test evidence checkpoint 14 | seed-2025-vehicle_signal_specification-14 |
 | 15 | 2025-11-19 | Wednesday | test | #7 | Add regression/test evidence checkpoint 15 | seed-2025-vehicle_signal_specification-15 |
 | 16 | 2025-12-14 | Sunday | docs | #8 | Update docs/deployment checkpoint 16 | seed-2025-vehicle_signal_specification-16 |
+| 17 | 2025-12-31 | Wednesday | docs | #8 | Update docs/deployment checkpoint 17 | seed-2025-vehicle_signal_specification-17 |
