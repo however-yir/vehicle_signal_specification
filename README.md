@@ -1,53 +1,99 @@
-# VEHICLE SIGNAL SPECIFICATION
+# vehicle_signal_specification - 车载信号规范仓库 | Vehicle Signal Specification Repository
 
-[![License](https://img.shields.io/badge/License-MPL%202.0-blue.svg)](https://opensource.org/license/MPL-2.0)
-[![Build Status](https://github.com/COVESA/vehicle_signal_specification/actions/workflows/buildcheck.yml/badge.svg)](https://github.com/COVESA/vehicle_signal_specification/actions/workflows/buildcheck.yml?query=branch%3Amaster)
+项目用于定义车载信号模型与语义规范，支撑跨系统接口协同。
 
-The overall goal of the Vehicle Signal Specification (VSS) is to create a common understanding of vehicle signals in order to reach a “common language” independent of the protocol or serialisation format.
+## 目录
 
-Generated documentation from latest commit on master branch is available at: [Vehicle Signal Specification Documentation](https://covesa.github.io/vehicle_signal_specification/).
+- [1. 项目概述](#1-项目概述)
+- [2. 目标与场景](#2-目标与场景)
+- [3. 核心能力](#3-核心能力)
+- [4. 技术栈](#4-技术栈)
+- [5. 仓库结构](#5-仓库结构)
+- [6. Quick Start](#6-quick-start)
+- [7. 配置建议](#7-配置建议)
+- [8. 开发与测试](#8-开发与测试)
+- [9. 协作与发布](#9-协作与发布)
+- [10. 路线图](#10-路线图)
+- [11. 贡献指南](#11-贡献指南)
+- [12. License](#12-license)
 
-## Getting started
+## 1. 项目概述
 
-### Using VSS
-To use a specific version of VSS in your toolchain, head over to our [releases page](https://github.com/COVESA/vehicle_signal_specification/releases/).
-The latest official release can be found [here](https://github.com/COVESA/vehicle_signal_specification/releases/latest).
+本仓库以工程化可维护为目标，强调文档清晰、结构稳定、可持续迭代。
 
-Work towards the next version is continuously ongoing in the [master branch](https://github.com/COVESA/vehicle_signal_specification/tree/master).
-To work with the specification directly, you need to clone this repository.
+## 2. 目标与场景
 
-For more information on how to set up the development environment and to be able to transform source *.vspec files to
-other formats see our [build guideline document](BUILD.md) and documentation in [VSS-tools](https://github.com/COVESA/vss-tools/blob/master/README.md).
+适用场景：
 
-### Discuss all things VSS, "meet" the community
+- 作为业务功能开发与验证的基础仓库。
+- 作为团队内部协作与知识沉淀的载体。
+- 作为后续扩展和二次开发的起点。
 
-The community has regular calls to discuss topics around VSS.
-This includes specific tickets in this repository as well as the broader direction in which VSS is evolving.
-You can find current call coordinates and dates in [our wiki](https://github.com/COVESA/vehicle_signal_specification/wiki/Weekly-meeting#meeting).
+## 3. 核心能力
 
-### Contribute to VSS
+- 维护信号定义、语义约束与版本治理。
+- 支持校验、生成与发布流程。
+- 支持跨团队统一接口语义。
 
-For detailed information see our [contribution guide](CONTRIBUTING.md)!
+## 4. 技术栈
 
-### VSS version and release handling
+- Make
 
-Both VSS (this repository) and [VSS-tools](https://github.com/COVESA/vss-tools) use a [PEP](https://peps.python.org/pep-0440/)
-inspired version scheme.
+## 5. 仓库结构
 
-Version is visible in the [Vehicle.vspec](spec/Vehicle/Vehicle.vspec) file where `VersionVSS.Label` typically is
-`-dev` for ongoing work in master-branch and an empty string for released versions.
+建议优先阅读：
 
-Versions are tagged in the form `vX.Y(.Z)` and the same syntax is used as names for VSS releases.
-VSS-tools is tagged but not released.
-For release candidates the form `vX.YrcN` is used. The `rcN` suffix is not used in
-[Vehicle.vspec](spec/Vehicle/Vehicle.vspec) files.
+- README.md：项目入口与整体说明。
+- docs 或同类目录：架构、规范、部署与 FAQ。
+- 核心源码目录：按模块深入阅读。
 
-For more information on how versions are managed see the [Release Instruction](https://github.com/COVESA/vehicle_signal_specification/wiki/Release-Instructions-and-Checklist)
+## 6. Quick Start
 
-## Contributors
-VSS is an open standard and we invite anybody to contribute. Currently VSS contains - among others - significant  contributions from
- - [Bayerische Motoren Werke Aktiengesellschaft (BMW AG)](https://www.bmwgroup.com/en.html)
- - [Volvo Cars](https://www.volvocars.com/)
- - [Jaguar Land Rover](https://www.jaguarlandrover.com/)
- - [Robert Bosch GmbH](https://www.bosch.com/)
- - [Geotab Inc](https://www.geotab.com/about/).
+1. 克隆仓库并进入目录：
+
+    git clone https://github.com/however-yir/vehicle_signal_specification.git
+    cd vehicle_signal_specification
+
+2. 安装依赖并启动（按项目类型选择）：
+
+Make 项目常用命令：
+    make
+
+3. 最小验证建议：
+
+- 依赖安装成功。
+- 核心流程可运行。
+- 基础测试或检查通过。
+
+## 7. 配置建议
+
+建议按 dev / staging / prod 分层配置，并将密钥类信息放入环境变量或密钥管理系统。
+
+## 8. 开发与测试
+
+推荐流程：
+
+1. 基于默认分支创建功能分支。
+2. 小步提交并保持提交目标单一。
+3. 本地完成构建与测试后再推送。
+4. 通过 Pull Request 完成评审与合并。
+
+## 9. 协作与发布
+
+建议使用语义化版本，发布说明应包含新增、修复与兼容性说明。
+
+## 10. 路线图
+
+建议按以下顺序推进：
+
+1. 稳定主流程与关键接口。
+2. 优化模块边界与可观测性。
+3. 完善自动化测试与文档体系。
+
+## 11. 贡献指南
+
+提交建议包含：变更背景、实现说明、验证结果、风险评估。
+
+## 12. License
+
+请以仓库内现有 License 文件为准。
