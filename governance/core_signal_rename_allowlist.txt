@@ -1,0 +1,3 @@
+# One fully-qualified standard signal path per line.
+# Example:
+# Vehicle.Powertrain.EngineSpeed

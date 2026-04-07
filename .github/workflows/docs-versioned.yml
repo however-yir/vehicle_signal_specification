@@ -1,0 +1,45 @@
+name: Documentation Versioned Deploy
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          submodules: true
+
+      - name: Install hugo
+        env:
+          HUGO_VER: 0.129.0
+        run: |
+          curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VER}/hugo_${HUGO_VER}_linux-amd64.deb
+          sudo dpkg -i hugo_${HUGO_VER}_linux-amd64.deb
+
+      - name: Build docs
+        run: hugo -s ./docs-gen
+
+      - name: Resolve target folder
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
+            echo "TARGET_FOLDER=versions/${GITHUB_REF_NAME}" >> "$GITHUB_ENV"
+          else
+            echo "TARGET_FOLDER=latest" >> "$GITHUB_ENV"
+          fi
+
+      - name: Deploy versioned docs
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: docs
+          target-folder: ${{ env.TARGET_FOLDER }}
+          clean: false
+          commit-message: "docs(versioned): deploy ${{ env.TARGET_FOLDER }} from ${{ github.sha }}"

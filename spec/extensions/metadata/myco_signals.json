@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "signals": [
+    {
+      "path": "Vehicle.MyCo.Cockpit.LogPipeline.BackpressureLevel",
+      "owner": "cockpit-logging@myco.example",
+      "unit": "percent",
+      "quantity": "relation",
+      "range": {
+        "min": 0,
+        "max": 100
+      },
+      "access": "ro",
+      "safety_level": "QM",
+      "privacy_class": "none",
+      "deprecated": false,
+      "replacement": ""
+    },
+    {
+      "path": "Vehicle.MyCo.Cockpit.LogPipeline.UploadState",
+      "owner": "cockpit-logging@myco.example",
+      "unit": "",
+      "quantity": "",
+      "range": null,
+      "access": "ro",
+      "safety_level": "QM",
+      "privacy_class": "none",
+      "deprecated": false,
+      "replacement": ""
+    },
+    {
+      "path": "Vehicle.MyCo.Cockpit.LogPipeline.CommandQuotaPerMinute",
+      "owner": "cockpit-security@myco.example",
+      "unit": "ratio",
+      "quantity": "relation",
+      "range": {
+        "min": 0,
+        "max": 1000
+      },
+      "access": "rw",
+      "safety_level": "ASIL-A",
+      "privacy_class": "none",
+      "deprecated": false,
+      "replacement": ""
+    },
+    {
+      "path": "Vehicle.MyCo.Cockpit.LogPipeline.LegacyUploadState",
+      "owner": "cockpit-logging@myco.example",
+      "unit": "",
+      "quantity": "",
+      "range": null,
+      "access": "ro",
+      "safety_level": "QM",
+      "privacy_class": "none",
+      "deprecated": true,
+      "replacement": "Vehicle.MyCo.Cockpit.LogPipeline.UploadState"
+    },
+    {
+      "path": "Vehicle.MyCo.Cloud.TelemetryDropRate",
+      "owner": "cloud-telemetry@myco.example",
+      "unit": "percent",
+      "quantity": "relation",
+      "range": {
+        "min": 0,
+        "max": 100
+      },
+      "access": "ro",
+      "safety_level": "QM",
+      "privacy_class": "pii",
+      "deprecated": false,
+      "replacement": ""
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+# Copyright (c) 2026 Contributors to COVESA
+#
+# This program and the accompanying materials are made available under the
+# terms of the Mozilla Public License 2.0 which is available at
+# https://www.mozilla.org/en-US/MPL/2.0/
+#
+# SPDX-License-Identifier: MPL-2.0
+
+#
+# MyCo extension namespace.
+# Rule: all enterprise signals must be in Vehicle.MyCo.*
+#
+
+Vehicle.MyCo:
+  type: branch
+  description: MyCo enterprise extension namespace.
+
+Vehicle.MyCo.Cockpit:
+  type: branch
+  description: Cockpit extension signals.
+
+Vehicle.MyCo.Cockpit.LogPipeline:
+  type: branch
+  description: MyCo cockpit logging pipeline extension.
+
+Vehicle.MyCo.Cockpit.LogPipeline.BackpressureLevel:
+  type: sensor
+  datatype: uint8
+  unit: percent
+  description: Backpressure level in cockpit log pipeline.
+
+Vehicle.MyCo.Cockpit.LogPipeline.UploadState:
+  type: sensor
+  datatype: string
+  allowed: ['IDLE', 'UPLOADING', 'DEGRADED', 'FAILED']
+  description: Upload state for cockpit logs.
+
+Vehicle.MyCo.Cockpit.LogPipeline.CommandQuotaPerMinute:
+  type: attribute
+  datatype: uint16
+  unit: ratio
+  description: Allowed remote control command quota per minute.
+
+Vehicle.MyCo.Cockpit.LogPipeline.LegacyUploadState:
+  type: sensor
+  datatype: string
+  deprecation: v0.2.0 - Replaced by Vehicle.MyCo.Cockpit.LogPipeline.UploadState.
+  description: Deprecated legacy upload state value.
+
+Vehicle.MyCo.Cloud:
+  type: branch
+  description: Cloud telemetry extension signals.
+
+Vehicle.MyCo.Cloud.TelemetryDropRate:
+  type: sensor
+  datatype: float
+  unit: percent
+  description: Cloud telemetry drop rate from edge pipeline.

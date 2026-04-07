@@ -1,0 +1,40 @@
+name: Schema Diff Report
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - "spec/**"
+      - "mapping/**"
+      - "governance/**"
+
+jobs:
+  diff-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Resolve base/head refs
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "BASE_REF=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_ENV"
+            echo "HEAD_REF=${{ github.event.pull_request.head.sha }}" >> "$GITHUB_ENV"
+          else
+            git fetch origin master --quiet || true
+            echo "BASE_REF=origin/master" >> "$GITHUB_ENV"
+            echo "HEAD_REF=${{ github.sha }}" >> "$GITHUB_ENV"
+          fi
+
+      - name: Generate report
+        run: ./scripts/generate_diff_report.sh "$BASE_REF" "$HEAD_REF" reports/schema-diff.md
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: schema-diff-report
+          path: reports/schema-diff.md

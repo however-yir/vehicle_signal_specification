@@ -32,3 +32,36 @@ where [m.n] is the release number.
 
 Detailed instructions on how releases are created can be found in the
 [Release Instructions and Checklist](https://github.com/COVESA/vehicle_signal_specification/wiki/Release-Instructions-and-Checklist).
+
+## Additional Governance Gates For Extension Layer
+
+For repositories that maintain enterprise extensions (`spec/extensions`) in addition
+to the standard trunk, apply these mandatory gates before release:
+
+1. Enable schema freeze by setting `governance/schema_freeze_state.json` to `FROZEN`.
+2. Generate and archive schema diff report (`reports/schema-diff.md`).
+3. Pass compatibility guard checks:
+   - `scripts/check_core_signal_rename_guard.sh`
+   - `scripts/check_schema_compat.py`
+   - `scripts/check_schema_freeze.py`
+4. Pass metadata lint (`scripts/lint_extension_metadata.py`) including:
+   - naming prefix (`Vehicle.MyCo.*`)
+   - owner/access/safety/privacy fields
+   - deprecated + replacement linkage
+   - unit/quantity/range validation
+5. Generate extension artifacts:
+   - JSON / CSV / IDL / FIDL / JSON-Schema
+   - SDK constants (`scripts/generate_sdk_constants.py`)
+6. Update `SIGNAL_CHANGELOG.md` and `UPSTREAM_DIFF.md`.
+7. Re-open schema by setting freeze state back to `OPEN` after release finalization.
+
+## Versioned Documentation Publish
+
+Versioned documentation deploy is handled by:
+
+- `.github/workflows/docs-versioned.yml`
+
+Deployment policy:
+
+- `master` push -> `gh-pages/latest/`
+- `v*` tag push -> `gh-pages/versions/<tag>/`

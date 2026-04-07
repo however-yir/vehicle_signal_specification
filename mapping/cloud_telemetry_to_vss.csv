@@ -1,0 +1,4 @@
+cloud_field,encoding,unit,vss_path,privacy_class,retention_days,owner,notes
+cockpit.log.backpressure_level,float,percent,Vehicle.MyCo.Cockpit.LogPipeline.BackpressureLevel,none,30,cockpit-logging@myco.example,Primary edge-to-cloud health metric
+cockpit.log.upload_state,string,string,Vehicle.MyCo.Cockpit.LogPipeline.UploadState,none,30,cockpit-logging@myco.example,Alerting dimension field
+cockpit.log.drop_rate,float,percent,Vehicle.MyCo.Cloud.TelemetryDropRate,pii,14,cloud-telemetry@myco.example,Used for telemetry transport SLA monitoring

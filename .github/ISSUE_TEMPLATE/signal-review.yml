@@ -1,0 +1,60 @@
+name: Signal Review
+about: Propose a signal schema change with governance metadata.
+title: "[Signal] "
+labels: [signal-review]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please complete all sections before requesting review.
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: Change Type
+      options:
+        - Add signal
+        - Modify signal
+        - Deprecate signal
+    validations:
+      required: true
+  - type: input
+    id: signal_path
+    attributes:
+      label: Signal path
+      placeholder: Vehicle.MyCo....
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Business context
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      placeholder: team@example.com
+    validations:
+      required: true
+  - type: input
+    id: access
+    attributes:
+      label: Access
+      placeholder: ro / rw
+    validations:
+      required: true
+  - type: input
+    id: safety
+    attributes:
+      label: Safety level
+      placeholder: QM / ASIL-A/B/C/D
+    validations:
+      required: true
+  - type: input
+    id: privacy
+    attributes:
+      label: Privacy class
+      placeholder: none / pii / sensitive-pii
+    validations:
+      required: true

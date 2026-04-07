@@ -1,0 +1,53 @@
+name: Signal Governance Checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - "codex/**"
+  workflow_dispatch:
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.10"
+
+      - name: Install vss-tools
+        run: |
+          python -m pip --quiet --no-input install --upgrade pip
+          ./scripts/install_vss_tools.sh
+
+      - name: Resolve base/head refs
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "BASE_REF=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_ENV"
+            echo "HEAD_REF=${{ github.event.pull_request.head.sha }}" >> "$GITHUB_ENV"
+          else
+            git fetch origin master --quiet || true
+            echo "BASE_REF=origin/master" >> "$GITHUB_ENV"
+            echo "HEAD_REF=${{ github.sha }}" >> "$GITHUB_ENV"
+          fi
+
+      - name: Lint extension metadata
+        run: python3 scripts/lint_extension_metadata.py
+
+      - name: Core signal rename guard
+        run: ./scripts/check_core_signal_rename_guard.sh "$BASE_REF" "$HEAD_REF"
+
+      - name: Schema compatibility guard
+        run: python3 scripts/check_schema_compat.py --base "$BASE_REF" --head "$HEAD_REF"
+
+      - name: Schema freeze guard
+        run: python3 scripts/check_schema_freeze.py --base "$BASE_REF" --head "$HEAD_REF"
+
+      - name: Kuksa compatibility smoke test
+        run: ./scripts/kuksa_compat_check.sh

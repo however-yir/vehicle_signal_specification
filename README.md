@@ -57,7 +57,7 @@
 推荐将信号资产分为两层：
 
 - 标准主干：`spec/` 下的标准目录（如 `Vehicle/`、`Powertrain/`、`Chassis/`）。
-- 扩展层：`overlays/extensions/` 下的企业或场景定制信号。
+- 扩展层：`spec/extensions/` 下的企业或场景定制信号。
 
 该策略的目标是把“行业共识”与“业务差异”解耦，既方便升级上游标准，也方便企业内部迭代。
 
@@ -218,8 +218,9 @@ make all
 
 - `mapping/can_to_vss.csv`
 - `mapping/uds_to_vss.csv`
+- `mapping/can_uds_to_vss.csv`
 - `mapping/cloud_telemetry_to_vss.csv`
-- `sdk/constants/`（自动生成常量定义）
+- `artifacts/extensions/<version>/sdk/`（自动生成常量定义）
 
 映射资产建议与版本号绑定，避免部署时“信号定义已升级但映射未同步”。
 
@@ -230,12 +231,15 @@ make all
 ```text
 .
 ├── spec/                         # VSS 标准主干目录
-├── overlays/
-│   ├── profiles/                 # 面向车型或场景的叠加配置
-│   └── extensions/               # 扩展层信号定义
+│   └── extensions/               # 企业扩展层（MyCo 前缀）
+├── overlays/                     # 上游 overlay 示例
 ├── docs-gen/                     # 文档站点生成内容
-├── scripts/                      # 工具安装与辅助脚本
+├── mapping/                      # CAN/UDS 与云端字段映射
+├── governance/                   # 版本、冻结、上游同步等治理资产
+├── scripts/                      # 校验、导出、报告、同步脚本
 ├── .github/workflows/            # CI 与发布流程
+├── SIGNAL_CHANGELOG.md
+├── UPSTREAM_DIFF.md
 ├── BUILD.md
 ├── RELEASE_PROCESS.md
 └── README.md
@@ -264,9 +268,19 @@ make
 
 ```bash
 make csv
+./scripts/export_extension_artifacts.sh
 ```
 
-更多构建说明请参考 `BUILD.md`，发布流程请参考 `RELEASE_PROCESS.md`。
+扩展治理检查示例：
+
+```bash
+python3 scripts/lint_extension_metadata.py
+python3 scripts/check_schema_compat.py --base origin/master --head HEAD
+./scripts/check_core_signal_rename_guard.sh origin/master HEAD
+./scripts/generate_diff_report.sh origin/master HEAD reports/schema-diff.md
+```
+
+更多构建说明请参考 `BUILD.md`，发布流程请参考 `RELEASE_PROCESS.md`，变更记录请参考 `SIGNAL_CHANGELOG.md`。
 
 ---
 
@@ -274,7 +288,9 @@ make csv
 
 - 最新文档站点可通过 GitHub Pages 发布；
 - `docs-gen/` 目录用于维护文档源与主题；
-- 建议采用版本化文档导航，确保历史版本可追溯；
+- 版本化发布由 `.github/workflows/docs-versioned.yml` 执行：
+  - `master` -> `gh-pages/latest/`
+  - `v*` tag -> `gh-pages/versions/<tag>/`
 - 建议在发布说明中同步维护“与上游差异清单”。
 
 ---
@@ -283,6 +299,7 @@ make csv
 
 - 保留 `MPL-2.0` 协议文件与原有许可证头注释；
 - 对 MPL 覆盖文件的修改，在分发时需提供对应源码；
+- 源码提供说明见 `MPL_SOURCE_OFFER.md`；
 - 贡献时请遵循仓库的签名与提交规范（参见 `CONTRIBUTING.md`）。
 
 ---
@@ -290,6 +307,8 @@ make csv
 ## 13. 社区协作与上游同步
 
 - 建议建立季度上游同步机制，控制分叉成本；
+- 自动化入口：`.github/workflows/quarterly-upstream-sync.yml`；
+- GitHub Topics 维护入口：`.github/workflows/update-github-topics.yml`；
 - 建议维护公开的差异看板，持续跟踪标准演进；
 - 社区讨论与例会信息可参考仓库 wiki。
 

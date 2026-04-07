@@ -1,0 +1,5 @@
+source_type,source_id,source_name,scale,offset,unit,vss_path,access,owner,notes
+CAN,0x18FF50E5,DLT_BackpressureLevel,1,0,percent,Vehicle.MyCo.Cockpit.LogPipeline.BackpressureLevel,ro,cockpit-logging@myco.example,Derived from logging ECU backpressure metric
+CAN,0x18FF51E5,DLT_UploadState,1,0,string,Vehicle.MyCo.Cockpit.LogPipeline.UploadState,ro,cockpit-logging@myco.example,Enum mapping IDLE/UPLOADING/DEGRADED/FAILED
+UDS,0xF190,VehicleIdentityVIN,1,0,string,Vehicle.VehicleIdentification.VIN,ro,vehicle-platform@myco.example,Read from diagnostics DID
+UDS,0xF187,VehicleSWVersion,1,0,string,Vehicle.MyCo.Cockpit.LogPipeline.LegacyUploadState,ro,cockpit-logging@myco.example,Legacy fallback until v0.2.0

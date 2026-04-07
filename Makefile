@@ -2,7 +2,9 @@
 # Makefile to generate specifications
 #
 
-.PHONY: clean all mandatory_targets json franca yaml csv ddsidl tests binary protobuf ttl s2dm ocf c overlays id jsonschema
+.PHONY: clean all mandatory_targets json franca yaml csv ddsidl tests binary protobuf ttl s2dm ocf c overlays id jsonschema \
+	extensions_json extensions_csv extensions_fidl extensions_idl extensions_jsonschema \
+	extensions_artifacts signal_lint schema_compat schema_diff sdk_constants governance_targets
 
 all: clean mandatory_targets optional_targets
 
@@ -23,6 +25,7 @@ VSS_VERSION ?= 0.0
 COMMON_ARGS=-u ./spec/units.yaml --strict
 COMMON_VSPEC_ARG=-s ./spec/VehicleSignalSpecification.vspec
 COMMON_DATATYPES_ARG=-t ./spec/VehicleDataTypes.vspec
+EXT_VSPEC_ARG=-s ./spec/extensions/VehicleSignalSpecificationExtensions.vspec
 
 
 # Exporters
@@ -61,6 +64,21 @@ json-noexpand:
 jsonschema:
 	vspec export jsonschema ${COMMON_ARGS} ${COMMON_VSPEC_ARG} -o vss.jsonschema
 
+extensions_json:
+	vspec export json ${COMMON_ARGS} ${EXT_VSPEC_ARG} -o vss_extensions.json
+
+extensions_csv:
+	vspec export csv ${COMMON_ARGS} ${EXT_VSPEC_ARG} -o vss_extensions.csv
+
+extensions_fidl:
+	vspec export franca --franca-vss-version $(VSS_VERSION) ${COMMON_ARGS} ${EXT_VSPEC_ARG} -o vss_extensions.fidl
+
+extensions_idl:
+	vspec export ddsidl ${COMMON_ARGS} ${EXT_VSPEC_ARG} -o vss_extensions.idl
+
+extensions_jsonschema:
+	vspec export jsonschema ${COMMON_ARGS} ${EXT_VSPEC_ARG} -o vss_extensions.schema.json
+
 plantuml:
 	vspec export plantuml ${COMMON_ARGS} ${COMMON_VSPEC_ARG} -o vss.puml
 
@@ -84,8 +102,26 @@ overlays:
 	vspec export json ${COMMON_ARGS} -l overlays/extensions/dual_wiper_systems.vspec ${COMMON_VSPEC_ARG} -o vss_dualwiper.json
 	vspec export json ${COMMON_ARGS} -l overlays/extensions/OBD.vspec ${COMMON_VSPEC_ARG} -o vss_obd.json
 
+extensions_artifacts:
+	./scripts/export_extension_artifacts.sh
+
+signal_lint:
+	python3 ./scripts/lint_extension_metadata.py
+
+schema_compat:
+	python3 ./scripts/check_schema_compat.py --base origin/master --head HEAD
+
+schema_diff:
+	./scripts/generate_diff_report.sh origin/master HEAD reports/schema-diff.md
+
+sdk_constants:
+	python3 ./scripts/generate_sdk_constants.py --metadata spec/extensions/metadata/myco_signals.json --out-dir artifacts/sdk
+
+governance_targets: signal_lint schema_compat schema_diff
+
 clean:
 	rm -f vss.*
 	rm -f vss_with_datatypes.json
+	rm -f vss_extensions.json vss_extensions.csv vss_extensions.fidl vss_extensions.idl vss_extensions.schema.json
 	rm -rf apigear
 	rm -rf samm

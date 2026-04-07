@@ -1,0 +1,3 @@
+# Paths allowed to change while schema freeze is FROZEN.
+# Example:
+# docs-gen/content/**

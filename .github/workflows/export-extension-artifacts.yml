@@ -1,0 +1,46 @@
+name: Export Extension Artifacts
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "spec/extensions/**"
+      - "mapping/**"
+      - "scripts/export_extension_artifacts.sh"
+      - "scripts/generate_sdk_constants.py"
+  push:
+    branches:
+      - master
+    tags:
+      - "v*"
+    paths:
+      - "spec/extensions/**"
+      - "mapping/**"
+      - "scripts/export_extension_artifacts.sh"
+      - "scripts/generate_sdk_constants.py"
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.10"
+
+      - name: Install vss-tools
+        run: |
+          python -m pip --quiet --no-input install --upgrade pip
+          ./scripts/install_vss_tools.sh
+
+      - name: Export extension artifacts
+        run: ./scripts/export_extension_artifacts.sh
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: vss-extension-artifacts
+          path: artifacts/extensions/**
+          if-no-files-found: error

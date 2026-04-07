@@ -56,6 +56,49 @@ user@debian:~/vehicle_signal_specification$ ls *.csv
 vss_rel_5.0-dev.csv
 ```
 
+### Generating extension artifacts (`spec/extensions`)
+
+For enterprise extension layer (`Vehicle.MyCo.*`) the repository provides dedicated targets:
+
+```bash
+make extensions_json
+make extensions_csv
+make extensions_fidl
+make extensions_idl
+make extensions_jsonschema
+```
+
+Or run the all-in-one exporter:
+
+```bash
+./scripts/export_extension_artifacts.sh
+```
+
+The script writes versioned outputs under:
+
+```text
+artifacts/extensions/<spec/extensions/VERSION>/
+```
+
+including SDK constants generated for application-side usage.
+
+### Governance checks
+
+Before opening a PR for signal changes, run:
+
+```bash
+python3 scripts/lint_extension_metadata.py
+python3 scripts/check_schema_compat.py --base origin/master --head HEAD
+./scripts/check_core_signal_rename_guard.sh origin/master HEAD
+./scripts/generate_diff_report.sh origin/master HEAD reports/schema-diff.md
+```
+
+During release freeze, additionally run:
+
+```bash
+python3 scripts/check_schema_freeze.py --base origin/master --head HEAD
+```
+
 ### Make sure that your changes pass CI checks
 
 Continuous Integration (CI) checks are defined in the [workflows](.github/workflows) folder.

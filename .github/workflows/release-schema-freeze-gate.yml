@@ -1,0 +1,41 @@
+name: Release Schema Freeze Gate
+
+on:
+  workflow_dispatch:
+
+jobs:
+  freeze-gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.10"
+
+      - name: Install vss-tools
+        run: |
+          python -m pip --quiet --no-input install --upgrade pip
+          ./scripts/install_vss_tools.sh
+
+      - name: Enforce freeze state
+        run: python3 scripts/check_schema_freeze.py --base origin/master --head HEAD --require-frozen
+
+      - name: Lint + compatibility checks
+        run: |
+          python3 scripts/lint_extension_metadata.py
+          ./scripts/check_core_signal_rename_guard.sh origin/master HEAD
+          python3 scripts/check_schema_compat.py --base origin/master --head HEAD
+          ./scripts/kuksa_compat_check.sh
+
+      - name: Generate release diff report
+        run: ./scripts/generate_diff_report.sh origin/master HEAD reports/release-schema-diff.md
+
+      - name: Upload release gate report
+        uses: actions/upload-artifact@v7
+        with:
+          name: release-schema-diff
+          path: reports/release-schema-diff.md

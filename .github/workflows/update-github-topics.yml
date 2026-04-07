@@ -1,0 +1,18 @@
+name: Update GitHub Topics
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-topics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Update topics
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./scripts/update_github_topics.sh "${{ github.repository }}"
