@@ -5,44 +5,50 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.129.0">
     <meta name="generator" content="Relearn 6.0.0">
-    <meta name="description" content="The source for the COVESA VSS Catalog can be found in *.vspec files in the COVESA VSS Repository. Released versions of the catalog in various formats can be found at release artifacts.
-Each signal in the VSS catalog has a description field and they may have a comment field. In some cases that is not sufficient to explain the rationale for the signal and how it is intended to be used.">
+    <meta name="description" content="Versioned Documentation This repository publishes documentation in a versioned layout:
+latest/ for the current master branch. versions/&lt;tag&gt;/ for tagged releases. Workflow: .github/workflows/docs-versioned.yml
+Extension Layer Enterprise-specific signals are maintained under:
+spec/extensions/VehicleSignalSpecificationExtensions.vspec spec/extensions/MyCo/MyCo.vspec spec/extensions/metadata/myco_signals.json Governance Checks Naming and metadata lint: scripts/lint_extension_metadata.py Core rename guard: scripts/check_core_signal_rename_guard.sh Schema compatibility: scripts/check_schema_compat.py Schema freeze: scripts/check_schema_freeze.py Diff report: scripts/generate_diff_report.sh ">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="VSS Catalog :: Vehicle Signal Specification">
-    <meta name="twitter:description" content="The source for the COVESA VSS Catalog can be found in *.vspec files in the COVESA VSS Repository. Released versions of the catalog in various formats can be found at release artifacts.
-Each signal in the VSS catalog has a description field and they may have a comment field. In some cases that is not sufficient to explain the rationale for the signal and how it is intended to be used.">
-    <meta property="og:url" content="https://covesa.github.io/vehicle_signal_specification/catalog/index.html">
+    <meta name="twitter:title" content="Versioned Release &amp; Extensions :: Vehicle Signal Specification">
+    <meta name="twitter:description" content="Versioned Documentation This repository publishes documentation in a versioned layout:
+latest/ for the current master branch. versions/&lt;tag&gt;/ for tagged releases. Workflow: .github/workflows/docs-versioned.yml
+Extension Layer Enterprise-specific signals are maintained under:
+spec/extensions/VehicleSignalSpecificationExtensions.vspec spec/extensions/MyCo/MyCo.vspec spec/extensions/metadata/myco_signals.json Governance Checks Naming and metadata lint: scripts/lint_extension_metadata.py Core rename guard: scripts/check_core_signal_rename_guard.sh Schema compatibility: scripts/check_schema_compat.py Schema freeze: scripts/check_schema_freeze.py Diff report: scripts/generate_diff_report.sh ">
+    <meta property="og:url" content="https://covesa.github.io/vehicle_signal_specification/governance/versioned_release_and_extensions/index.html">
     <meta property="og:site_name" content="Vehicle Signal Specification">
-    <meta property="og:title" content="VSS Catalog :: Vehicle Signal Specification">
-    <meta property="og:description" content="The source for the COVESA VSS Catalog can be found in *.vspec files in the COVESA VSS Repository. Released versions of the catalog in various formats can be found at release artifacts.
-Each signal in the VSS catalog has a description field and they may have a comment field. In some cases that is not sufficient to explain the rationale for the signal and how it is intended to be used.">
+    <meta property="og:title" content="Versioned Release &amp; Extensions :: Vehicle Signal Specification">
+    <meta property="og:description" content="Versioned Documentation This repository publishes documentation in a versioned layout:
+latest/ for the current master branch. versions/&lt;tag&gt;/ for tagged releases. Workflow: .github/workflows/docs-versioned.yml
+Extension Layer Enterprise-specific signals are maintained under:
+spec/extensions/VehicleSignalSpecificationExtensions.vspec spec/extensions/MyCo/MyCo.vspec spec/extensions/metadata/myco_signals.json Governance Checks Naming and metadata lint: scripts/lint_extension_metadata.py Core rename guard: scripts/check_core_signal_rename_guard.sh Schema compatibility: scripts/check_schema_compat.py Schema freeze: scripts/check_schema_freeze.py Diff report: scripts/generate_diff_report.sh ">
     <meta property="og:locale" content="en-us">
-    <meta property="og:type" content="website">
-    <meta itemprop="name" content="VSS Catalog :: Vehicle Signal Specification">
-    <meta itemprop="description" content="The source for the COVESA VSS Catalog can be found in *.vspec files in the COVESA VSS Repository. Released versions of the catalog in various formats can be found at release artifacts.
-Each signal in the VSS catalog has a description field and they may have a comment field. In some cases that is not sufficient to explain the rationale for the signal and how it is intended to be used.">
-    <meta itemprop="datePublished" content="2019-08-04T12:46:30+02:00">
-    <meta itemprop="dateModified" content="2019-08-04T12:46:30+02:00">
-    <meta itemprop="wordCount" content="97">
-    <title>VSS Catalog :: Vehicle Signal Specification</title>
-    <link href="/vehicle_signal_specification/catalog/index.xml" rel="alternate" type="application/rss+xml" title="VSS Catalog :: Vehicle Signal Specification"><link rel="shortcut icon" href="/vehicle_signal_specification/images/fav.png" type="image/x-icon" />
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Governance">
+    <meta itemprop="name" content="Versioned Release &amp; Extensions :: Vehicle Signal Specification">
+    <meta itemprop="description" content="Versioned Documentation This repository publishes documentation in a versioned layout:
+latest/ for the current master branch. versions/&lt;tag&gt;/ for tagged releases. Workflow: .github/workflows/docs-versioned.yml
+Extension Layer Enterprise-specific signals are maintained under:
+spec/extensions/VehicleSignalSpecificationExtensions.vspec spec/extensions/MyCo/MyCo.vspec spec/extensions/metadata/myco_signals.json Governance Checks Naming and metadata lint: scripts/lint_extension_metadata.py Core rename guard: scripts/check_core_signal_rename_guard.sh Schema compatibility: scripts/check_schema_compat.py Schema freeze: scripts/check_schema_freeze.py Diff report: scripts/generate_diff_report.sh ">
+    <meta itemprop="wordCount" content="52">
+    <title>Versioned Release &amp; Extensions :: Vehicle Signal Specification</title><link rel="shortcut icon" href="/vehicle_signal_specification/images/fav.png" type="image/x-icon" />
 
-    <link href="/vehicle_signal_specification/css/fontawesome-all.min.css?1775559869" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/fontawesome-all.min.css?1775559869" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/nucleus.css?1775559869" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/auto-complete.css?1775559869" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/auto-complete.css?1775559869" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/perfect-scrollbar.min.css?1775559869" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/fonts.css?1775559869" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/fonts.css?1775559869" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/theme.css?1775559869" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/theme-blue.css?1775559869" rel="stylesheet" id="R-variant-style">
-    <link href="/vehicle_signal_specification/css/chroma-learn.css?1775559869" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/vehicle_signal_specification/css/variant.css?1775559869" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/print.css?1775559869" rel="stylesheet" media="print">
-    <script src="/vehicle_signal_specification/js/variant.js?1775559869"></script>
+    <link href="/vehicle_signal_specification/css/fontawesome-all.min.css?1775559877" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/fontawesome-all.min.css?1775559877" rel="stylesheet"></noscript>
+    <link href="/vehicle_signal_specification/css/nucleus.css?1775559877" rel="stylesheet">
+    <link href="/vehicle_signal_specification/css/auto-complete.css?1775559877" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/auto-complete.css?1775559877" rel="stylesheet"></noscript>
+    <link href="/vehicle_signal_specification/css/perfect-scrollbar.min.css?1775559877" rel="stylesheet">
+    <link href="/vehicle_signal_specification/css/fonts.css?1775559877" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/fonts.css?1775559877" rel="stylesheet"></noscript>
+    <link href="/vehicle_signal_specification/css/theme.css?1775559877" rel="stylesheet">
+    <link href="/vehicle_signal_specification/css/theme-blue.css?1775559877" rel="stylesheet" id="R-variant-style">
+    <link href="/vehicle_signal_specification/css/chroma-learn.css?1775559877" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/vehicle_signal_specification/css/variant.css?1775559877" rel="stylesheet">
+    <link href="/vehicle_signal_specification/css/print.css?1775559877" rel="stylesheet" media="print">
+    <script src="/vehicle_signal_specification/js/variant.js?1775559877"></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.relBasePath='..';
-      window.relearn.relBaseUri='..\/..';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/covesa.github.io\/vehicle_signal_specification';
       window.index_js_url="/vehicle_signal_specification/index.search.js";
       // variant stuff
@@ -58,7 +64,7 @@ Each signal in the VSS catalog has a description field and they may have a comme
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
   </head>
-  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/vehicle_signal_specification/catalog/index.html">
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/vehicle_signal_specification/governance/versioned_release_and_extensions/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -71,7 +77,9 @@ Each signal in the VSS catalog has a description field and they may have a comme
               <div class="topbar-content">
                 <div class="topbar-content-wrapper"><nav class="TableOfContents">
   <ul>
-    <li><a href="#vss-catalog-concepts">VSS Catalog Concepts</a></li>
+    <li><a href="#versioned-documentation">Versioned Documentation</a></li>
+    <li><a href="#extension-layer">Extension Layer</a></li>
+    <li><a href="#governance-checks">Governance Checks</a></li>
   </ul>
 </nav>
                 </div>
@@ -80,15 +88,16 @@ Each signal in the VSS catalog has a description field and they may have a comme
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/vehicle_signal_specification/index.html"><span itemprop="name">Vehicle Signal Specification</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">VSS Catalog</span><meta itemprop="position" content="2"></li>
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/vehicle_signal_specification/governance/index.html"><span itemprop="name">Governance</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Versioned Release &amp; Extensions</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
 				
-            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/covesa/vehicle_signal_specification/edit/master/docs-gen/content/catalog/_index.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/covesa/vehicle_signal_specification/edit/master/docs-gen/content/governance/versioned_release_and_extensions.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/rule_set/includes/index.html" title="Includes (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/governance/index.html" title="Governance (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html" title="Vehicle Motion Management (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/rule_set/index.html" title="Rule Set (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -108,14 +117,29 @@ Each signal in the VSS catalog has a description field and they may have a comme
             <header class="headline">
             </header>
 
-<h1 id="vss-catalog">VSS Catalog</h1>
+<h1 id="versioned-release--extensions">Versioned Release &amp; Extensions</h1>
 
-<p>The source for the COVESA VSS Catalog can be found in <code>*.vspec</code> files in the <a href="https://github.com/COVESA/vehicle_signal_specification" rel="external" target="_blank">COVESA VSS Repository</a>.
-Released versions of the catalog in various formats can be found at <a href="https://github.com/COVESA/vehicle_signal_specification/releases" rel="external" target="_blank">release artifacts</a>.</p>
-<p>Each signal in the VSS catalog has a <code>description</code> field and they may have a <code>comment</code> field. In some cases that is not sufficient to explain the rationale for the signal and how it is intended to be used. This section of the VSS documentation gives additional information on selected signal.</p>
-<h2 id="vss-catalog-concepts">VSS Catalog Concepts</h2>
+<h2 id="versioned-documentation">Versioned Documentation</h2>
+<p>This repository publishes documentation in a versioned layout:</p>
 <ul>
-<li><a href="/vehicle_signal_specification/catalog/vehicle_motion_management/">Vehicle Motion Management</a> Information on the VSS concept for motion management.</li>
+<li><code>latest/</code> for the current master branch.</li>
+<li><code>versions/&lt;tag&gt;/</code> for tagged releases.</li>
+</ul>
+<p>Workflow: <code>.github/workflows/docs-versioned.yml</code></p>
+<h2 id="extension-layer">Extension Layer</h2>
+<p>Enterprise-specific signals are maintained under:</p>
+<ul>
+<li><code>spec/extensions/VehicleSignalSpecificationExtensions.vspec</code></li>
+<li><code>spec/extensions/MyCo/MyCo.vspec</code></li>
+<li><code>spec/extensions/metadata/myco_signals.json</code></li>
+</ul>
+<h2 id="governance-checks">Governance Checks</h2>
+<ul>
+<li>Naming and metadata lint: <code>scripts/lint_extension_metadata.py</code></li>
+<li>Core rename guard: <code>scripts/check_core_signal_rename_guard.sh</code></li>
+<li>Schema compatibility: <code>scripts/check_schema_compat.py</code></li>
+<li>Schema freeze: <code>scripts/check_schema_freeze.py</code></li>
+<li>Diff report: <code>scripts/generate_diff_report.sh</code></li>
 </ul>
 
             <footer class="footline">
@@ -145,12 +169,12 @@ Released versions of the catalog in various formats can be found at <a href="htt
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/vehicle_signal_specification/js/auto-complete.js?1775559869" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.min.js?1775559869" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.stemmer.support.min.js?1775559869" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.multi.min.js?1775559869" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.en.min.js?1775559869" defer></script>
-        <script src="/vehicle_signal_specification/js/search.js?1775559869" defer></script>
+        <script src="/vehicle_signal_specification/js/auto-complete.js?1775559877" defer></script>
+        <script src="/vehicle_signal_specification/js/lunr/lunr.min.js?1775559877" defer></script>
+        <script src="/vehicle_signal_specification/js/lunr/lunr.stemmer.support.min.js?1775559877" defer></script>
+        <script src="/vehicle_signal_specification/js/lunr/lunr.multi.min.js?1775559877" defer></script>
+        <script src="/vehicle_signal_specification/js/lunr/lunr.en.min.js?1775559877" defer></script>
+        <script src="/vehicle_signal_specification/js/search.js?1775559877" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation">
         <hr class="padding">
@@ -161,8 +185,8 @@ Released versions of the catalog in various formats can be found at <a href="htt
           <li data-nav-id="/vehicle_signal_specification/introduction/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/index.html">Introduction</a><ul id="R-subsections-f5db5b284a3d023503978d00824e9c16" class="morespace collapsible-menu">
           <li data-nav-id="/vehicle_signal_specification/introduction/overview/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/overview/index.html">Overview</a></li>
           <li data-nav-id="/vehicle_signal_specification/introduction/taxonomy/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/taxonomy/index.html">Taxonomies</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/governance/index.html" class=""><a class="padding" href="/vehicle_signal_specification/governance/index.html">Governance</a><ul id="R-subsections-c14b5cf4798fb8145d28e1f242d1a2f6" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/governance/versioned_release_and_extensions/index.html" class=""><a class="padding" href="/vehicle_signal_specification/governance/versioned_release_and_extensions/index.html">Versioned Release &amp; Extensions</a></li></ul></li>
+          <li data-nav-id="/vehicle_signal_specification/governance/index.html" class="parent "><a class="padding" href="/vehicle_signal_specification/governance/index.html">Governance</a><ul id="R-subsections-c14b5cf4798fb8145d28e1f242d1a2f6" class="morespace collapsible-menu">
+          <li data-nav-id="/vehicle_signal_specification/governance/versioned_release_and_extensions/index.html" class="active"><a class="padding" href="/vehicle_signal_specification/governance/versioned_release_and_extensions/index.html">Versioned Release &amp; Extensions</a></li></ul></li>
           <li data-nav-id="/vehicle_signal_specification/rule_set/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/index.html">Rule Set</a><ul id="R-subsections-816430a737ffa7bef5da453d8c2d55d4" class="morespace collapsible-menu">
           <li data-nav-id="/vehicle_signal_specification/rule_set/basics/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/basics/index.html">Basic Rules</a></li>
           <li data-nav-id="/vehicle_signal_specification/rule_set/branches/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/branches/index.html">Branch Entry</a></li>
@@ -175,7 +199,7 @@ Released versions of the catalog in various formats can be found at <a href="htt
           <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/allowed/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/allowed/index.html">Value Restrictions</a></li></ul></li>
           <li data-nav-id="/vehicle_signal_specification/rule_set/instances/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/instances/index.html">Instances</a></li>
           <li data-nav-id="/vehicle_signal_specification/rule_set/includes/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/includes/index.html">Includes</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/catalog/index.html" class="active parent "><a class="padding" href="/vehicle_signal_specification/catalog/index.html">VSS Catalog</a><ul id="R-subsections-665f6cae1c56b0dcfe0d69bfe3f4be93" class="morespace collapsible-menu">
+          <li data-nav-id="/vehicle_signal_specification/catalog/index.html" class=""><a class="padding" href="/vehicle_signal_specification/catalog/index.html">VSS Catalog</a><ul id="R-subsections-665f6cae1c56b0dcfe0d69bfe3f4be93" class="morespace collapsible-menu">
           <li data-nav-id="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html" class=""><a class="padding" href="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html">Vehicle Motion Management</a></li></ul></li>
           <li data-nav-id="/vehicle_signal_specification/extensions/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/index.html">Extending and Customizing VSS</a><ul id="R-subsections-6bd9c98d69baa9a2d1581189a2aaf28a" class="morespace collapsible-menu">
           <li data-nav-id="/vehicle_signal_specification/extensions/overlay/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/overlay/index.html">VSS Overlay Mechanism</a></li>
@@ -207,7 +231,7 @@ Released versions of the catalog in various formats can be found at <a href="htt
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-language">Language</label>
                     <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
-                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/vehicle_signal_specification/catalog/index.html" lang="en-us" selected></option>
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/vehicle_signal_specification/governance/versioned_release_and_extensions/index.html" lang="en-us" selected></option>
                     </select>
                   </div>
                   <div class="clear"></div>
@@ -258,8 +282,8 @@ Released versions of the catalog in various formats can be found at <a href="htt
         </div>
       </div>
     </aside>
-    <script src="/vehicle_signal_specification/js/clipboard.min.js?1775559869" defer></script>
-    <script src="/vehicle_signal_specification/js/perfect-scrollbar.min.js?1775559869" defer></script>
-    <script src="/vehicle_signal_specification/js/theme.js?1775559869" defer></script>
+    <script src="/vehicle_signal_specification/js/clipboard.min.js?1775559877" defer></script>
+    <script src="/vehicle_signal_specification/js/perfect-scrollbar.min.js?1775559877" defer></script>
+    <script src="/vehicle_signal_specification/js/theme.js?1775559877" defer></script>
   </body>
 </html>
