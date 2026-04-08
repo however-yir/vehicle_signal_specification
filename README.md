@@ -149,6 +149,16 @@
 3. 同版本导出的 JSON/CSV/IDL 工件；
 4. 变更差异摘要和兼容性说明。
 
+### 5.3 工件落点与消费方建议
+
+| 资产 | 主要入口 | 建议发布落点 | 主要消费者 |
+|---|---|---|---|
+| 标准规范源文件 | `spec/` | Git tag 对应源码树 | 标准维护者 |
+| 扩展层 overlay | `overlays/extensions/` | `build/extensions/<version>/` | 企业平台团队 |
+| SDK 常量生成 | `scripts/generate_sdk_constants.py` | `generated/sdk/` | App / Backend / Tooling |
+| 差异报告 | `scripts/generate_diff_report.sh` | `reports/diff/` | 架构评审、发布说明 |
+| 站点文档 | `docs-gen/` | 静态站点或 Pages 工件 | 跨团队读者 |
+
 ---
 
 ## 6. 校验与兼容测试
@@ -298,6 +308,16 @@ python3 scripts/check_schema_compat.py --base origin/master --head HEAD
   - `master` -> `gh-pages/latest/`
   - `v*` tag -> `gh-pages/versions/<tag>/`
 - 建议在发布说明中同步维护“与上游差异清单”。
+
+### 11.1 站点与文档入口建议
+
+| 入口 | 仓库位置 | 用途 |
+|---|---|---|
+| 仓库入口说明 | `README.md` | 对外说明项目定位与治理边界 |
+| 站点生成配置 | `docs-gen/config.toml` | 统一静态站点配置 |
+| 站点内容源 | `docs-gen/content/` | 按主题拆分规范页面 |
+| overlay 说明 | `overlays/README.md` | 解释扩展层如何组织 |
+| 示例图片 | `pics/` | 展示规范重用与文档配图 |
 
 ---
 
