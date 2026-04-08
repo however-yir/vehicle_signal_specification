@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Governance :: Vehicle Signal Specification</title>
-    <link>https://covesa.github.io/vehicle_signal_specification/governance/index.html</link>
+    <link>https://however-yir.github.io/vehicle_signal_specification/latest/governance/index.html</link>
     <description>The Vehicle Signal Specification (VSS) project is an initiative by COVESA to define a syntax and a catalog for vehicle signals.&#xA;The artifacts maintained by the VSS project consist of:&#xA;Source code, documentation and releases in the VSS github repository. Tools for parsing and converting VSS files in the VSS-tools github repository. The VSS project has an informal structure with a chair and github maintainers appointed by COVESA. Tasks for the chair includes hosting regular meeting to discuss incoming pull requests and issues, as well as roadmap and release planning.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://covesa.github.io/vehicle_signal_specification/governance/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://however-yir.github.io/vehicle_signal_specification/latest/governance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Versioned Release &amp; Extensions</title>
-      <link>https://covesa.github.io/vehicle_signal_specification/governance/versioned_release_and_extensions/index.html</link>
+      <link>https://however-yir.github.io/vehicle_signal_specification/latest/governance/versioned_release_and_extensions/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://covesa.github.io/vehicle_signal_specification/governance/versioned_release_and_extensions/index.html</guid>
+      <guid>https://however-yir.github.io/vehicle_signal_specification/latest/governance/versioned_release_and_extensions/index.html</guid>
       <description>Versioned Documentation This repository publishes documentation in a versioned layout:&#xA;latest/ for the current master branch. versions/&lt;tag&gt;/ for tagged releases. Workflow: .github/workflows/docs-versioned.yml&#xA;Extension Layer Enterprise-specific signals are maintained under:&#xA;spec/extensions/VehicleSignalSpecificationExtensions.vspec spec/extensions/MyCo/MyCo.vspec spec/extensions/metadata/myco_signals.json Governance Checks Naming and metadata lint: scripts/lint_extension_metadata.py Core rename guard: scripts/check_core_signal_rename_guard.sh Schema compatibility: scripts/check_schema_compat.py Schema freeze: scripts/check_schema_freeze.py Diff report: scripts/generate_diff_report.sh </description>
     </item>
   </channel>
