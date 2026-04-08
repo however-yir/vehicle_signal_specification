@@ -7,6 +7,12 @@
 [![License](https://img.shields.io/badge/License-MPL%202.0-blue.svg)](https://opensource.org/license/MPL-2.0)
 [![Build Status](https://github.com/COVESA/vehicle_signal_specification/actions/workflows/buildcheck.yml/badge.svg)](https://github.com/COVESA/vehicle_signal_specification/actions/workflows/buildcheck.yml?query=branch%3Amaster)
 
+> Status: `active`
+>
+> Upstream: `COVESA/vehicle_signal_specification`
+>
+> Role: standards and signal-governance layer for the autonomous-driving portfolio
+
 ---
 
 ## 目录
