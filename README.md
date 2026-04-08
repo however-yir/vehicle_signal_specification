@@ -5,11 +5,17 @@
 ⭐ 覆盖信号建模、版本治理、工件生成、兼容校验与发布流程，支持从车端协议到云端遥测的数据语义对齐。
 
 [![License](https://img.shields.io/badge/License-MPL%202.0-blue.svg)](https://opensource.org/license/MPL-2.0)
-[![Build Status](https://github.com/COVESA/vehicle_signal_specification/actions/workflows/buildcheck.yml/badge.svg)](https://github.com/COVESA/vehicle_signal_specification/actions/workflows/buildcheck.yml?query=branch%3Amaster)
+[![Build](https://github.com/however-yir/vehicle_signal_specification/actions/workflows/buildcheck.yml/badge.svg)](https://github.com/however-yir/vehicle_signal_specification/actions/workflows/buildcheck.yml?query=branch%3Amaster)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-0A7EFA)](https://however-yir.github.io/vehicle_signal_specification/latest/)
+[![Status](https://img.shields.io/badge/status-active-2563EB)](https://github.com/however-yir/vehicle_signal_specification)
 
 > Status: `active`
 >
 > Upstream: `COVESA/vehicle_signal_specification`
+>
+> Docs: `https://however-yir.github.io/vehicle_signal_specification/latest/`
+>
+> Attribution: upstream MPL-2.0 remains in `LICENSE`; fork boundary and redistribution notes are maintained in `LICENSE.HOWEVER` and `NOTICE.md`.
 >
 > Role: standards and signal-governance layer for the autonomous-driving portfolio
 
@@ -268,7 +274,7 @@ make all
 ### 10.1 获取源码
 
 ```bash
-git clone https://github.com/COVESA/vehicle_signal_specification.git
+git clone https://github.com/however-yir/vehicle_signal_specification.git
 cd vehicle_signal_specification
 git submodule update --init
 ```
@@ -302,7 +308,7 @@ python3 scripts/check_schema_compat.py --base origin/master --head HEAD
 
 ## 11. 文档与站点发布
 
-- 最新文档站点可通过 GitHub Pages 发布；
+- 最新文档站点：`https://however-yir.github.io/vehicle_signal_specification/latest/`；
 - `docs-gen/` 目录用于维护文档源与主题；
 - 版本化发布由 `.github/workflows/docs-versioned.yml` 执行：
   - `master` -> `gh-pages/latest/`
@@ -324,6 +330,7 @@ python3 scripts/check_schema_compat.py --base origin/master --head HEAD
 ## 12. 合规与开源要求
 
 - 保留 `MPL-2.0` 协议文件与原有许可证头注释；
+- fork 归属与分发边界说明见 `LICENSE.HOWEVER` 与 `NOTICE.md`；
 - 对 MPL 覆盖文件的修改，在分发时需提供对应源码；
 - 源码提供说明见 `MPL_SOURCE_OFFER.md`；
 - 贡献时请遵循仓库的签名与提交规范（参见 `CONTRIBUTING.md`）。

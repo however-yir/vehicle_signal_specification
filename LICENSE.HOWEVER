@@ -1,0 +1,16 @@
+Vehicle Signal Specification Fork-Specific Licensing Notes
+==========================================================
+
+This repository is a derivative work of:
+  https://github.com/COVESA/vehicle_signal_specification
+
+Upstream licensing remains in effect for upstream-derived files:
+  - MPL-2.0 (see LICENSE)
+
+Fork-specific notes:
+  - This fork adds repository positioning, governance-facing README packaging, and GitHub Pages publishing adjustments.
+  - This file does not replace the upstream MPL-2.0 obligations.
+  - Redistribution should preserve upstream copyright notices together with this fork's NOTICE.
+
+Maintainer:
+  however-yir / Liu Zhuoran
