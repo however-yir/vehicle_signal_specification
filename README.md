@@ -282,8 +282,14 @@ git submodule update --init
 ### 10.2 安装工具并验证
 
 ```bash
-./scripts/install_vss_tools.sh
+./scripts/bootstrap_vspec_toolchain.sh
 make
+```
+
+如需避免本机直接安装工具链，可使用容器化导出：
+
+```bash
+./scripts/export_with_container.sh all
 ```
 
 ### 10.3 生成工件示例

@@ -4,7 +4,8 @@
 
 .PHONY: clean all mandatory_targets json franca yaml csv ddsidl tests binary protobuf ttl s2dm ocf c overlays id jsonschema \
 	extensions_json extensions_csv extensions_fidl extensions_idl extensions_jsonschema \
-	extensions_artifacts signal_lint schema_compat schema_diff sdk_constants governance_targets
+	extensions_artifacts signal_lint schema_compat schema_diff sdk_constants governance_targets \
+	bootstrap container_export
 
 all: clean mandatory_targets optional_targets
 
@@ -118,6 +119,12 @@ sdk_constants:
 	python3 ./scripts/generate_sdk_constants.py --metadata spec/extensions/metadata/myco_signals.json --out-dir artifacts/sdk
 
 governance_targets: signal_lint schema_compat schema_diff
+
+bootstrap:
+	./scripts/bootstrap_vspec_toolchain.sh
+
+container_export:
+	./scripts/export_with_container.sh all
 
 clean:
 	rm -f vss.*
