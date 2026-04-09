@@ -5,7 +5,7 @@ var relearn_search_index = [
     "description": "VSS can be transformed into other formats or generated as code to integrate with other tooling environments and ecosystems.\nThe COVESA vss-tools project contains various helpful converters and is also used to validate the syntactic validity of the VSS standard catalogue.\nIf new features are introduced to the VSS specification, the community will ensure they are supported in the official vss-tools as well.\nFig 1. Generating various output formats from a VSS specification",
     "tags": [],
     "title": "Official VSS-Tools",
-    "uri": "/vehicle_signal_specification/ecosystem/tools/index.html"
+    "uri": "/vehicle_signal_specification/latest/ecosystem/tools/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set",
@@ -13,7 +13,7 @@ var relearn_search_index = [
     "description": "Specification format The Vehicle Signal Specification domain specification consist of vspec files. vspec files are YAML files following the rule set defined for VSS. They also support the use of include directives to refer to other vspec files, much like #include in C/C++. . Please note that, from a YAML perspective, the include directive is just another comment.\nThe file VehicleSignalSpecification.vspec serves as root and includes other vspec files from the VSS repository.",
     "tags": [],
     "title": "Basic Rules",
-    "uri": "/vehicle_signal_specification/rule_set/basics/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/basics/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set",
@@ -21,7 +21,7 @@ var relearn_search_index = [
     "description": "A branch entry describes a tree branch (or node) containing other branches and signals.\nA branch entry example is given below:\nVehicle.Trunk: type: branch description: All signals related to the rear trunk aggregate: falseEach data entry has a name, in the example above Vehicle.Trunk. VSS use a dot-notated name style where the full path of a branch consists of all parent branches from the root node separated by dots and at the end the name of the current branch.",
     "tags": [],
     "title": "Branch Entry",
-    "uri": "/vehicle_signal_specification/rule_set/branches/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/branches/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Introduction",
@@ -29,7 +29,7 @@ var relearn_search_index = [
     "description": "What is VSS? The Vehicle Signal Specification introduces a domain taxonomy for vehicle signals. In short this means that VSS introduces:\nA syntax for defining vehicle signals in a structured manner. A catalog of signals related to vehicles. It can be used as standard in automotive applications to communicate information around the vehicle, which is semantically well defined. It focuses on vehicle signals, in the sense of classical attributes, sensors and actuators with the raw data communicated over vehicle buses and data which is more commonly associated with the infotainment system alike.",
     "tags": [],
     "title": "Overview",
-    "uri": "/vehicle_signal_specification/introduction/overview/index.html"
+    "uri": "/vehicle_signal_specification/latest/introduction/overview/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Ecosystem",
@@ -37,7 +37,7 @@ var relearn_search_index = [
     "description": "Other standards or specifications sometimes reference VSS.\nCOVESA VISS When using VSS in an automotive tech stack, a question is which protocols and technologies to use to access VSS signals.\nThe COVESA Vehicle Information Service Specification (VISS) is an open standard, specifying a protocol to access VSS data using JSON messages on transport protocols like websocket (VISSv1), HTTP, MQTT (+VISSv2), or gRPC (+VISSv3).\nTo learn more check\nVehicle Information Service Specification (VISS) V1 published as a Discontinued Draft.",
     "tags": [],
     "title": "Related Standards",
-    "uri": "/vehicle_signal_specification/ecosystem/standards/index.html"
+    "uri": "/vehicle_signal_specification/latest/ecosystem/standards/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set",
@@ -45,7 +45,7 @@ var relearn_search_index = [
     "description": "Leaf nodes of the tree contain metadata describing the data associated to the node. In order to help application developers, who are using the specification, it makes a distinction between three types of signals:\nsensor actuator attribute Examples and more information you’ll find in the Sensors, Actuators and Attributes chapter.",
     "tags": [],
     "title": "Data Entry",
-    "uri": "/vehicle_signal_specification/rule_set/data_entry/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/data_entry/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Introduction",
@@ -53,7 +53,7 @@ var relearn_search_index = [
     "description": "The figure below explains the idea of a taxonomy as bridge between human and machine understanding of data. It is important to focus on a specific domain to get common understanding and acceptance. The link between two or more domain taxonomies can be seen as second step.\nComponents of a domain taxonomy A domain taxonomy, like VSS, consists of three important components, which will be discussed in detail in this documentation:",
     "tags": [],
     "title": "Taxonomies",
-    "uri": "/vehicle_signal_specification/introduction/taxonomy/index.html"
+    "uri": "/vehicle_signal_specification/latest/introduction/taxonomy/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Ecosystem",
@@ -61,7 +61,7 @@ var relearn_search_index = [
     "description": "Various software frameworks and products exist to work with VSS data. Some are Open Source, some are commercial prducts and services. There are solutions to work with VSS in-vehicle, as well as using it in the cloud.\nThe best entry-point for an up-to-date introduction to VSS products and Use Cases is the COVESA VSS wiki.",
     "tags": [],
     "title": "Software \u0026 Solutions",
-    "uri": "/vehicle_signal_specification/ecosystem/software/index.html"
+    "uri": "/vehicle_signal_specification/latest/ecosystem/software/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set",
@@ -69,7 +69,7 @@ var relearn_search_index = [
     "description": "VSS resembles primarily the physical structure of the vehicle, so quite often there is a need to repeat branches and data entries (e.g. doors, axles, etc). To avoid hard-coded repetitions of branches and data entries in the specification an instance-concept is supported. Instances remove the need of repeating definitions, by defining at the node itself how often it occurs in the resulting tree. They are meant as a short-cut in the specification and interpreted by the tools.",
     "tags": [],
     "title": "Instances",
-    "uri": "/vehicle_signal_specification/rule_set/instances/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/instances/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set",
@@ -77,7 +77,7 @@ var relearn_search_index = [
     "description": "An include directive in a vspec file will read the file it refers to and the contents of that file will be inserted into the current buffer in place of the include directive. The included file will, in its turn, be scanned for include directives to be replaced, effectively forming a tree of included files.\nSee Fig 6 for an example of such a tree.\nFig 6. Include directives\nThe include directive has the following format:",
     "tags": [],
     "title": "Includes",
-    "uri": "/vehicle_signal_specification/rule_set/includes/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/includes/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e VSS Catalog",
@@ -85,7 +85,7 @@ var relearn_search_index = [
     "description": "Introduction In modern vehicles multiple electronic controlled systems are interacting to realize the overall vehicle motion in all physical directions. Typically, the driver gives input e.g. using the steering wheel and the accelerator and brake pedals, but additional vehicle functions may have also requests towards the motion actuators. One example is that a traction control system may want to limit the performance due to slippery road conditions or that the emergency braking system requests braking.",
     "tags": [],
     "title": "Vehicle Motion Management",
-    "uri": "/vehicle_signal_specification/catalog/vehicle_motion_management/index.html"
+    "uri": "/vehicle_signal_specification/latest/catalog/vehicle_motion_management/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Extending and Customizing VSS",
@@ -93,7 +93,7 @@ var relearn_search_index = [
     "description": "VSS defines the standard catalog for vehicle signals independent of the used protocol and environment. In order to adopt the specification we realize that certain additions and modifications to the standard catalog are necessary. VSS Overlays are meant to bring you a standardized way of handling those changes.\nThe following features with the intended usage patterns are currently supported:\nAdding new nodes: By adding nodes the standard catalog can be extended with proprietary concepts.",
     "tags": [],
     "title": "VSS Overlay Mechanism",
-    "uri": "/vehicle_signal_specification/extensions/overlay/index.html"
+    "uri": "/vehicle_signal_specification/latest/extensions/overlay/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set \u003e Data Entry",
@@ -101,7 +101,7 @@ var relearn_search_index = [
     "description": "In VSS each data entry (except branches and structs) must specify a datatype. It can be a primitive type, an array of a primitive type or a struct type.\nThis is the default datatype for the given entry. The VSS project typically selects datatype (and unit) so that values are easily understandable by humans, can cover a reasonable range and supports reasonable precision. An example is given below where Vehicle.Speed has been assigned the datatype float and the unit km/h.",
     "tags": [],
     "title": "Datatypes",
-    "uri": "/vehicle_signal_specification/rule_set/data_entry/data_types/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/data_entry/data_types/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification",
@@ -109,7 +109,7 @@ var relearn_search_index = [
     "description": "VSS Tree Model The diagram below shows a generated tree of the VSS. Here you can see a mapping for the current catalog of signals related to vehicles. Click a Branch Node to expand or collapse the tree. (Slower animation while pressing the altKey (“option” key for Mac OS-X).)\nCurrent Population of the model - in respect to VSS Types and Datatypes Click on the nodes to highlight the links, or hover over the links to see their exact population.",
     "tags": [],
     "title": "Introduction",
-    "uri": "/vehicle_signal_specification/introduction/index.html"
+    "uri": "/vehicle_signal_specification/latest/introduction/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Extending and Customizing VSS",
@@ -117,7 +117,7 @@ var relearn_search_index = [
     "description": "This profile can be used to specify how VSS signals can be extended to include cybersecurity attibutes.\nMapping Syntax The syntax for definition of a signal with cybersecurty attributes (in an overlay) is specified below.\n\u003cVSS Signal name\u003e: type: \u003cVSS type\u003e datatype: \u003cVSS datatype\u003e cybersecurity: [authentication: {true|false}] [encryption: {true|false}] [integrity_check: {true|false}] [impact_profiles: {[{motion|privacy|regulation|safety|operational}]}] Set authentication attribute to true if you need to ensure serialized data is being exchanged between trusted entities or prevent unauthorized access to serialized data during transmission.",
     "tags": [],
     "title": "Cybersecurity Profile",
-    "uri": "/vehicle_signal_specification/extensions/cybersecurity_profile/index.html"
+    "uri": "/vehicle_signal_specification/latest/extensions/cybersecurity_profile/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set \u003e Data Entry",
@@ -125,7 +125,7 @@ var relearn_search_index = [
     "description": "Structs are a newly introduced feature to the VSS-syntax. Please note that all VSS-tools exporters do not yet support structs.\nIntroduction VSS has historically supported only the following datatypes:\nInteger-based datatypes (e.g. uint8, int32) Float-based datatypes (float, double) String Boolean In addition to this VSS arrays of the datatypes given above has been supported. This has been considered insufficient for some use-cases. Typical examples are when something cannot be described by a single value, but multiple values are needed.",
     "tags": [],
     "title": "Struct Types",
-    "uri": "/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/data_entry/data_types_struct/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification",
@@ -133,7 +133,7 @@ var relearn_search_index = [
     "description": "The Vehicle Signal Specification (VSS) project is an initiative by COVESA to define a syntax and a catalog for vehicle signals.\nThe artifacts maintained by the VSS project consist of:\nSource code, documentation and releases in the VSS github repository. Tools for parsing and converting VSS files in the VSS-tools github repository. The VSS project has an informal structure with a chair and github maintainers appointed by COVESA. Tasks for the chair includes hosting regular meeting to discuss incoming pull requests and issues, as well as roadmap and release planning.",
     "tags": [],
     "title": "Governance",
-    "uri": "/vehicle_signal_specification/governance/index.html"
+    "uri": "/vehicle_signal_specification/latest/governance/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification",
@@ -141,7 +141,7 @@ var relearn_search_index = [
     "description": "The Rule Set of a domain taxonomy is used to describe how to write the data definition syntactically.\nThis chapter defines and describes the rule set for VSS. Tools in the vss-tools repository can be used to validate that a specification follows the rule set for VSS, but those tools may have limitations and may not check all rules stated in this document. In case of conflict, what is stated in the rule set in this documentation is considered to have precedence over tool implementations.",
     "tags": [],
     "title": "Rule Set",
-    "uri": "/vehicle_signal_specification/rule_set/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set \u003e Data Entry",
@@ -149,7 +149,7 @@ var relearn_search_index = [
     "description": "Introduction to Data Units in VSS It is in VSS possible for signals to specify a unit of measurement from a list of predefined data units. For most signals in the VSS standard catalog, a data unit has been selected. A typical example is Vehicle.Speed, as shown below.\nVehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed.The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry.",
     "tags": [],
     "title": "Data Units",
-    "uri": "/vehicle_signal_specification/rule_set/data_entry/data_units/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/data_entry/data_units/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Extending and Customizing VSS",
@@ -157,7 +157,7 @@ var relearn_search_index = [
     "description": "This profile can be used to specify how VSS signals can be serialized on network as data signal.\nMapping Syntax The syntax for definition of a signal with network serialization data (in an overlay) is specified below.\n\u003cVSS Signal name\u003e: type: \u003cVSS type\u003e datatype: \u003cVSS datatype\u003e network_serialization: signal: \u003csignal name in DBC or ARXML\u003e [interval_ms: \u003c data update interval in milliseconds\u003e] [on_change: {true|false}] [endianness: {big_endian|little_endian}] [default: \u003cdefault value or init value (physical) of the signal\u003e] [length_bits: \u003c length of signal in bits\u003e] [transform: .",
     "tags": [],
     "title": "Network Serialization Profile",
-    "uri": "/vehicle_signal_specification/extensions/network_serialization_profile/index.html"
+    "uri": "/vehicle_signal_specification/latest/extensions/network_serialization_profile/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification",
@@ -165,7 +165,7 @@ var relearn_search_index = [
     "description": "The source for the COVESA VSS Catalog can be found in *.vspec files in the COVESA VSS Repository. Released versions of the catalog in various formats can be found at release artifacts.\nEach signal in the VSS catalog has a description field and they may have a comment field. In some cases that is not sufficient to explain the rationale for the signal and how it is intended to be used.",
     "tags": [],
     "title": "VSS Catalog",
-    "uri": "/vehicle_signal_specification/catalog/index.html"
+    "uri": "/vehicle_signal_specification/latest/catalog/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification",
@@ -173,7 +173,7 @@ var relearn_search_index = [
     "description": "The VSS-project is active in three areas:\nDefining a metamodel (syntax) for VSS datapoints. Defining the VSS Standard Catalog. Implementation of tooling (VSS-Tools). The VSS Standard Catalog defines a common view of the major attributes, sensors and actuators of vehicles. This is used in many different scenarios, protocols and environments. Additional meta data might be required for data-governance, -quality or -sources. The instantiation of branches might not fit your vehicle. Some signals in the VSS Signal Catalog may not be relevant or appropriate for your use-case, and proprietary signals might be needed for extending the specification for your own use-cases",
     "tags": [],
     "title": "Extending and Customizing VSS",
-    "uri": "/vehicle_signal_specification/extensions/index.html"
+    "uri": "/vehicle_signal_specification/latest/extensions/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set \u003e Data Entry",
@@ -181,7 +181,7 @@ var relearn_search_index = [
     "description": "Property Types Overview sensor type Sensors are properties that, from a VSS-perspective, are read-only. The values of a sensor property typically change over time and within an ignition cycle (i.e., a driving journey). Reading a sensor shall return the actual value of the related property (e.g., the current speed or the current position of the seat).\nactuator type Similarly, actuators are properties that, from a VSS-perspective, can be read and written.",
     "tags": [],
     "title": "Sensors, Actuators and Attributes",
-    "uri": "/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/data_entry/sensor_actuator/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification",
@@ -189,7 +189,7 @@ var relearn_search_index = [
     "description": "Warning DISCLAIMER: The following information about open source licensing shall not be considered legal advice. For advice on licensing, COVESA suggests that you contact your open source officer or legal counsel.\nWhich license applies VSS as well as the VSS-tools are covered by the Mozilla Public License 2.0 (MPL-2.0). The MPL-2.0 is an OSI approved Open Source license that gives you a lot of freedom using VSS in your products, or for (academic) research.",
     "tags": [],
     "title": "License",
-    "uri": "/vehicle_signal_specification/license/index.html"
+    "uri": "/vehicle_signal_specification/latest/license/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification",
@@ -197,7 +197,7 @@ var relearn_search_index = [
     "description": "VSS is used in different products, solutions and use cases. This section will give some pointers to the wider VSS ecosystem",
     "tags": [],
     "title": "Ecosystem",
-    "uri": "/vehicle_signal_specification/ecosystem/index.html"
+    "uri": "/vehicle_signal_specification/latest/ecosystem/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set \u003e Data Entry",
@@ -205,7 +205,7 @@ var relearn_search_index = [
     "description": "VSS supports default values by the default attribute. The intention is to provide a mechanism to provide initial values for data entries already when loading a VSS catalog. This could typically be useful for attributes that never or rarely change, like vehicle VIN or vehicle color.\nThe standard Vehicle Signal Specification does not include default values for all attributes. If a default value has not been specified then the OEM must define a default value matching the actual vehicle, either by using the default concept, or by the same other mechanism.",
     "tags": [],
     "title": "Default Values",
-    "uri": "/vehicle_signal_specification/rule_set/data_entry/default/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/data_entry/default/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Governance",
@@ -213,7 +213,7 @@ var relearn_search_index = [
     "description": "Versioned Documentation This repository publishes documentation in a versioned layout:\nlatest/ for the current master branch. versions/\u003ctag\u003e/ for tagged releases. Workflow: .github/workflows/docs-versioned.yml\nExtension Layer Enterprise-specific signals are maintained under:\nspec/extensions/VehicleSignalSpecificationExtensions.vspec spec/extensions/MyCo/MyCo.vspec spec/extensions/metadata/myco_signals.json Governance Checks Naming and metadata lint: scripts/lint_extension_metadata.py Core rename guard: scripts/check_core_signal_rename_guard.sh Schema compatibility: scripts/check_schema_compat.py Schema freeze: scripts/check_schema_freeze.py Diff report: scripts/generate_diff_report.sh ",
     "tags": [],
     "title": "Versioned Release \u0026 Extensions",
-    "uri": "/vehicle_signal_specification/governance/versioned_release_and_extensions/index.html"
+    "uri": "/vehicle_signal_specification/latest/governance/versioned_release_and_extensions/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification \u003e Rule Set \u003e Data Entry",
@@ -221,7 +221,7 @@ var relearn_search_index = [
     "description": "Specifying allowed values Optionally it is possible to define an array of allowed values, which will restrict the usage of the data entry in the implementation of the specification. It is expected, that any value not mentioned in the array is considered an error and the implementation of the specification shall react accordingly. The datatype of the array elements is the datatype defined for the data entry itself. For attributes it is possible to optionally set a default value.",
     "tags": [],
     "title": "Value Restrictions",
-    "uri": "/vehicle_signal_specification/rule_set/data_entry/allowed/index.html"
+    "uri": "/vehicle_signal_specification/latest/rule_set/data_entry/allowed/index.html"
   },
   {
     "breadcrumb": "",
@@ -229,7 +229,7 @@ var relearn_search_index = [
     "description": "The Vehicle Signal Specification (VSS) is an initiative by COVESA to define a syntax and a catalog for vehicle signals. The source code and releases can be found in the VSS github repository. Some tools for parsing and converting VSS files can be found in the VSS-tools github repository.\nThis documentation gives you an overview of VSS:\nIntroduction Read this part if you want to know more about what the specification is all about, what’s in and out and how to quickly browse through the current status.",
     "tags": [],
     "title": "Vehicle Signal Specification",
-    "uri": "/vehicle_signal_specification/index.html"
+    "uri": "/vehicle_signal_specification/latest/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification",
@@ -237,7 +237,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Categories",
-    "uri": "/vehicle_signal_specification/categories/index.html"
+    "uri": "/vehicle_signal_specification/latest/categories/index.html"
   },
   {
     "breadcrumb": "Vehicle Signal Specification",
@@ -245,6 +245,6 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Tags",
-    "uri": "/vehicle_signal_specification/tags/index.html"
+    "uri": "/vehicle_signal_specification/latest/tags/index.html"
   }
 ]
