@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.129.0">
+    <meta name="generator" content="Relearn 6.0.0">
+    <meta name="description" content="The VSS-project is active in three areas:
+Defining a metamodel (syntax) for VSS datapoints. Defining the VSS Standard Catalog. Implementation of tooling (VSS-Tools). The VSS Standard Catalog defines a common view of the major attributes, sensors and actuators of vehicles. This is used in many different scenarios, protocols and environments. Additional meta data might be required for data-governance, -quality or -sources. The instantiation of branches might not fit your vehicle. Some signals in the VSS Signal Catalog may not be relevant or appropriate for your use-case, and proprietary signals might be needed for extending the specification for your own use-cases">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Extending and Customizing VSS :: Vehicle Signal Specification">
+    <meta name="twitter:description" content="The VSS-project is active in three areas:
+Defining a metamodel (syntax) for VSS datapoints. Defining the VSS Standard Catalog. Implementation of tooling (VSS-Tools). The VSS Standard Catalog defines a common view of the major attributes, sensors and actuators of vehicles. This is used in many different scenarios, protocols and environments. Additional meta data might be required for data-governance, -quality or -sources. The instantiation of branches might not fit your vehicle. Some signals in the VSS Signal Catalog may not be relevant or appropriate for your use-case, and proprietary signals might be needed for extending the specification for your own use-cases">
+    <meta property="og:url" content="https://however-yir.github.io/vehicle_signal_specification/latest/extensions/index.html">
+    <meta property="og:site_name" content="Vehicle Signal Specification">
+    <meta property="og:title" content="Extending and Customizing VSS :: Vehicle Signal Specification">
+    <meta property="og:description" content="The VSS-project is active in three areas:
+Defining a metamodel (syntax) for VSS datapoints. Defining the VSS Standard Catalog. Implementation of tooling (VSS-Tools). The VSS Standard Catalog defines a common view of the major attributes, sensors and actuators of vehicles. This is used in many different scenarios, protocols and environments. Additional meta data might be required for data-governance, -quality or -sources. The instantiation of branches might not fit your vehicle. Some signals in the VSS Signal Catalog may not be relevant or appropriate for your use-case, and proprietary signals might be needed for extending the specification for your own use-cases">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Extending and Customizing VSS :: Vehicle Signal Specification">
+    <meta itemprop="description" content="The VSS-project is active in three areas:
+Defining a metamodel (syntax) for VSS datapoints. Defining the VSS Standard Catalog. Implementation of tooling (VSS-Tools). The VSS Standard Catalog defines a common view of the major attributes, sensors and actuators of vehicles. This is used in many different scenarios, protocols and environments. Additional meta data might be required for data-governance, -quality or -sources. The instantiation of branches might not fit your vehicle. Some signals in the VSS Signal Catalog may not be relevant or appropriate for your use-case, and proprietary signals might be needed for extending the specification for your own use-cases">
+    <meta itemprop="wordCount" content="591">
+    <title>Extending and Customizing VSS :: Vehicle Signal Specification</title>
+    <link href="/vehicle_signal_specification/latest/extensions/index.xml" rel="alternate" type="application/rss+xml" title="Extending and Customizing VSS :: Vehicle Signal Specification"><link rel="shortcut icon" href="/vehicle_signal_specification/images/fav.png" type="image/x-icon" />
+
+    <link href="/vehicle_signal_specification/latest/css/fontawesome-all.min.css?1775710955" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/latest/css/fontawesome-all.min.css?1775710955" rel="stylesheet"></noscript>
+    <link href="/vehicle_signal_specification/latest/css/nucleus.css?1775710955" rel="stylesheet">
+    <link href="/vehicle_signal_specification/latest/css/auto-complete.css?1775710955" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/latest/css/auto-complete.css?1775710955" rel="stylesheet"></noscript>
+    <link href="/vehicle_signal_specification/latest/css/perfect-scrollbar.min.css?1775710955" rel="stylesheet">
+    <link href="/vehicle_signal_specification/latest/css/fonts.css?1775710955" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/latest/css/fonts.css?1775710955" rel="stylesheet"></noscript>
+    <link href="/vehicle_signal_specification/latest/css/theme.css?1775710955" rel="stylesheet">
+    <link href="/vehicle_signal_specification/latest/css/theme-blue.css?1775710955" rel="stylesheet" id="R-variant-style">
+    <link href="/vehicle_signal_specification/latest/css/chroma-learn.css?1775710955" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/vehicle_signal_specification/latest/css/variant.css?1775710955" rel="stylesheet">
+    <link href="/vehicle_signal_specification/latest/css/print.css?1775710955" rel="stylesheet" media="print">
+    <script src="/vehicle_signal_specification/latest/js/variant.js?1775710955"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/however-yir.github.io\/vehicle_signal_specification\/latest';
+      window.index_js_url="/vehicle_signal_specification/latest/index.search.js";
+      // variant stuff
+      window.variants && variants.init( [ 'blue' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/vehicle_signal_specification/latest/extensions/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+  <ul>
+    <li><a href="#general-methods-for-extending-and-customizing-vss">General methods for extending and customizing VSS</a></li>
+    <li><a href="#extentions-for-extending-vss-signal-catalog-with-additional-signals">Extentions for extending VSS Signal Catalog with additional signals</a></li>
+    <li><a href="#vss-model-profiles">VSS Model Profiles</a>
+      <ul>
+        <li><a href="#existing-vss-model-profiles">Existing VSS Model Profiles</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/vehicle_signal_specification/latest/index.html"><span itemprop="name">Vehicle Signal Specification</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Extending and Customizing VSS</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+				
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/however-yir/vehicle_signal_specification/edit/master/docs-gen/content/extensions/_index.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/latest/catalog/vehicle_motion_management/index.html" title="Vehicle Motion Management (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/latest/extensions/overlay/index.html" title="VSS Overlay Mechanism (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="extending-and-customizing-vss">Extending and Customizing VSS</h1>
+
+<p>The VSS-project is active in three areas:</p>
+<ul>
+<li>Defining a metamodel (syntax) for VSS datapoints.</li>
+<li>Defining the VSS Standard Catalog.</li>
+<li>Implementation of tooling (<a href="https://github.com/COVESA/vss-tools" rel="external" target="_blank">VSS-Tools</a>).</li>
+</ul>
+<p>The VSS Standard Catalog defines a common view of the major
+attributes, sensors and actuators of vehicles. This is used in many different scenarios,
+protocols and environments. Additional meta data might be required for data-governance,
+-quality or -sources. The instantiation of branches might not fit your vehicle.
+Some signals in the VSS Signal Catalog may not be relevant or appropriate for your use-case,
+and proprietary signals might be needed for extending the specification for your own use-cases</p>
+<h2 id="general-methods-for-extending-and-customizing-vss">General methods for extending and customizing VSS</h2>
+<p>Correct use of those attributes are checked by <a href="https://github.com/COVESA/vss-tools/" rel="external" target="_blank">VSS-Tools</a>.
+It is allowed to use additional attributes to define additional characteristics of VSS datapoints.
+This could for example be useful for defining deployment-related data, like information on how a datapoint
+shall be stored or transmitted.</p>
+<p>A simple example could be:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Speed</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">sensor</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">unit</span>: <span style="color:#e6db74">&#34;km/h&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">datatype</span>: <span style="color:#ae81ff">float</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">interval_ms</span>: <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">source</span>: <span style="color:#e6db74">&#34;ecu0xAA&#34;</span></span></span></code></pre></div><p>&hellip; to define source and update interval of the VSS <code>Vehicle.Speed</code> datapoint for a specific deployment.
+VSS-Tools has a <a href="https://github.com/COVESA/vss-tools/blob/master/docs/vspec.md#handling-of-overlays-and-extensions" rel="external" target="_blank">mechanism</a>
+to consider provided extra attributes.</p>
+<p>The VSS-project defines the VSS Signal Catalog. It is possible that you need to adapt the content of the catalog for your deployment,
+by adding, removing or changing signals.</p>
+<p>As a VSS user you have in principle three methods for extending or customizing VSS</p>
+<ol>
+<li>You can select to not use the VSS Standard Catalog, and instead use a catalog that you have defined yourself.</li>
+<li>You can use a fork of the <a href="https://github.com/COVESA/vehicle_signal_specification" rel="external" target="_blank">VSS repository</a> and modify the contents as needed.</li>
+<li>You can use the <a href="/vehicle_signal_specification/latest/extensions/overlay/index.html">VSS overlay mechanism</a> to define changes to be applied on top of the VSS Standard Catalog</li>
+</ol>
+<p>The advantage with the third alternative compared to the second alternative is that it can give a separation between the basic model
+and deployment information, and reduced risk for merge conflicts if upgrading to a new version of the VSS Standard Catalog.</p>
+<h2 id="extentions-for-extending-vss-signal-catalog-with-additional-signals">Extentions for extending VSS Signal Catalog with additional signals</h2>
+<p>With the feature of overlays, we introduced a new folder in the
+repository called <code>overlays</code>. In there you&rsquo;ll find two additional folders with overlays:</p>
+<ul>
+<li><code>profiles</code>: Vehicle profiles are larger overlays to adapt VSS to a specific vehicle category, like motorbikes.</li>
+<li><code>extensions</code>: VSS Signal Catalog Extensions are smaller overlays typically to be applied after applying vehicle profiles (if any).</li>
+</ul>
+
+<div class="box notices cstyle warning">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-triangle"></i> Warning</div>
+  <div class="box-content">
+
+<p><strong>DISCLAIMER:</strong>
+The overlays in those folders shall currently be seen as examples only, and are not part of the official VSS specification.</p>
+</div>
+</div>
+<h2 id="vss-model-profiles">VSS Model Profiles</h2>
+<p>Users of VSS often need the same type of additional data, and for that reason it has been decided that the COVESA VSS-project will maintain a list of extension profiles.
+A VSS Model Profile describes how VSS extended attributes can be used to provide additional information in a specific area to VSS datapoints.
+Potential examples could include network serialization, security attributes and safety attributes.
+They shall as of today not be seen as &ldquo;standardized profiles&rdquo; or &ldquo;recommended profiles&rdquo;.</p>
+<p>The extension profiles may be defined within the <a href="https://github.com/COVESA/vehicle_signal_specification" rel="external" target="_blank">VSS repository</a> or somewhere else.
+Extension profiles defined within the <a href="https://github.com/COVESA/vehicle_signal_specification" rel="external" target="_blank">VSS repository</a> are managed like all other assets within the repository,
+i.e. if someone want to contribute or change an extension profile they will need to create a Pull Request which then will be discussed within the project.</p>
+<p>This information typically does not fit in the standard catalog, but could be provided in a use-case specific
+<a href="/vehicle_signal_specification/latest/extensions/overlay/index.html">overlay</a>.</p>
+<h3 id="existing-vss-model-profiles">Existing VSS Model Profiles</h3>
+<ul>
+<li><a href="https://github.com/eclipse-kuksa/kuksa-can-provider/tree/main/mapping" rel="external" target="_blank">Eclipse Kuksa VSS-DBC mapping</a></li>
+<li><a href="/vehicle_signal_specification/latest/extensions/cybersecurity_profile/index.html">Cybersecurity Profile</a></li>
+<li><a href="/vehicle_signal_specification/latest/extensions/network_serialization_profile/index.html">Network Serialization Profile</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="logo" href="https://however-yir.github.io/vehicle_signal_specification/latest/">
+  <img src="/vehicle_signal_specification/images/vss.png">
+</a>
+
+        </div>
+
+        <search><form action="/vehicle_signal_specification/latest/search.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/vehicle_signal_specification/latest/js/auto-complete.js?1775710955" defer></script>
+        <script src="/vehicle_signal_specification/latest/js/lunr/lunr.min.js?1775710955" defer></script>
+        <script src="/vehicle_signal_specification/latest/js/lunr/lunr.stemmer.support.min.js?1775710955" defer></script>
+        <script src="/vehicle_signal_specification/latest/js/lunr/lunr.multi.min.js?1775710955" defer></script>
+        <script src="/vehicle_signal_specification/latest/js/lunr/lunr.en.min.js?1775710955" defer></script>
+        <script src="/vehicle_signal_specification/latest/js/search.js?1775710955" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/vehicle_signal_specification/latest/introduction/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/introduction/index.html">Introduction</a><ul id="R-subsections-f5db5b284a3d023503978d00824e9c16" class="morespace collapsible-menu">
+          <li data-nav-id="/vehicle_signal_specification/latest/introduction/overview/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/introduction/overview/index.html">Overview</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/introduction/taxonomy/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/introduction/taxonomy/index.html">Taxonomies</a></li></ul></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/governance/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/governance/index.html">Governance</a><ul id="R-subsections-c14b5cf4798fb8145d28e1f242d1a2f6" class="morespace collapsible-menu">
+          <li data-nav-id="/vehicle_signal_specification/latest/governance/versioned_release_and_extensions/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/governance/versioned_release_and_extensions/index.html">Versioned Release &amp; Extensions</a></li></ul></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/index.html">Rule Set</a><ul id="R-subsections-816430a737ffa7bef5da453d8c2d55d4" class="morespace collapsible-menu">
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/basics/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/basics/index.html">Basic Rules</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/branches/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/branches/index.html">Branch Entry</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/data_entry/index.html" class="alwaysopen"><a class="padding" href="/vehicle_signal_specification/latest/rule_set/data_entry/index.html">Data Entry</a><ul id="R-subsections-ba77ba218fcc0133bc138c588fbb6eb9" class="morespace collapsible-menu">
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/data_entry/data_types/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/data_entry/data_types/index.html">Datatypes</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/data_entry/data_types_struct/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/data_entry/data_types_struct/index.html">Struct Types</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/data_entry/data_units/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/data_entry/data_units/index.html">Data Units</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/data_entry/sensor_actuator/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/data_entry/sensor_actuator/index.html">Sensors, Actuators and Attributes</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/data_entry/default/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/data_entry/default/index.html">Default Values</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/data_entry/allowed/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/data_entry/allowed/index.html">Value Restrictions</a></li></ul></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/instances/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/instances/index.html">Instances</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/rule_set/includes/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/rule_set/includes/index.html">Includes</a></li></ul></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/catalog/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/catalog/index.html">VSS Catalog</a><ul id="R-subsections-665f6cae1c56b0dcfe0d69bfe3f4be93" class="morespace collapsible-menu">
+          <li data-nav-id="/vehicle_signal_specification/latest/catalog/vehicle_motion_management/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/catalog/vehicle_motion_management/index.html">Vehicle Motion Management</a></li></ul></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/extensions/index.html" class="active parent "><a class="padding" href="/vehicle_signal_specification/latest/extensions/index.html">Extending and Customizing VSS</a><ul id="R-subsections-6bd9c98d69baa9a2d1581189a2aaf28a" class="morespace collapsible-menu">
+          <li data-nav-id="/vehicle_signal_specification/latest/extensions/overlay/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/extensions/overlay/index.html">VSS Overlay Mechanism</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/extensions/cybersecurity_profile/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/extensions/cybersecurity_profile/index.html">Cybersecurity Profile</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/extensions/network_serialization_profile/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/extensions/network_serialization_profile/index.html">Network Serialization Profile</a></li></ul></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/license/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/license/index.html">License</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/ecosystem/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/ecosystem/index.html">Ecosystem</a><ul id="R-subsections-30d29cf6aaa7fb1e0e056430337d3cd8" class="morespace collapsible-menu">
+          <li data-nav-id="/vehicle_signal_specification/latest/ecosystem/tools/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/ecosystem/tools/index.html">Official VSS-Tools</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/ecosystem/standards/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/ecosystem/standards/index.html">Related Standards</a></li>
+          <li data-nav-id="/vehicle_signal_specification/latest/ecosystem/software/index.html" class=""><a class="padding" href="/vehicle_signal_specification/latest/ecosystem/software/index.html">Software &amp; Solutions</a></li></ul></li>
+          </ul>
+        </div>
+        <div id="R-shortcuts">
+          <div class="nav-title padding">More</div>
+          <ul class="space">
+            <li><a class="padding" href="https://github.com/however-yir/vehicle_signal_specification"><i class='fab fa-github'></i> Github repo</a></li>
+            <li><a class="padding" href="https://github.com/however-yir/vehicle_signal_specification/releases"><i class='fas fa-download'></i> Releases</a></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/vehicle_signal_specification/latest/extensions/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-blue" value="blue" selected>Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter"><center>
+    
+    <a class="github-button" href="https://github.com/however-yir/vehicle_signal_specification/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download however-yir/vehicle_signal_specification on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/however-yir/vehicle_signal_specification" data-icon="octicon-star" data-show-count="true" aria-label="Star however-yir/vehicle_signal_specification on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/however-yir/vehicle_signal_specification/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork however-yir/vehicle_signal_specification on GitHub">Fork</a>
+
+    Latest Released Version: 6.0
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/vehicle_signal_specification/latest/js/clipboard.min.js?1775710955" defer></script>
+    <script src="/vehicle_signal_specification/latest/js/perfect-scrollbar.min.js?1775710955" defer></script>
+    <script src="/vehicle_signal_specification/latest/js/theme.js?1775710955" defer></script>
+  </body>
+</html>
