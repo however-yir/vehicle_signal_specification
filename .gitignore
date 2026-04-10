@@ -5,3 +5,15 @@
 
 # Generated files
 vss_rel_*
+
+# --- Baseline Ignore Rules ---
+.DS_Store
+*.iml
+__pycache__/
+*.py[cod]
+.env
+.env.*
+node_modules/
+dist/
+build/
+target/
