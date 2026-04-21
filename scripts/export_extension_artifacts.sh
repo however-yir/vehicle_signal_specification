@@ -3,7 +3,7 @@ set -eu
 
 OUT_ROOT="${1:-artifacts/extensions}"
 VERSION_FILE="spec/extensions/VERSION"
-EXT_ROOT="spec/extensions/VehicleSignalSpecificationExtensions.vspec"
+EXT_ROOT="spec/VehicleSignalSpecificationExtensions.vspec"
 COMMON_ARGS="-u ./spec/units.yaml --strict"
 
 if ! command -v vspec >/dev/null 2>&1; then

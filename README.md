@@ -1,7 +1,7 @@
 # 车辆信号规范 / Vehicle Signal Specification（标准主干 + 扩展层）
 
-🔥 面向智能汽车软件定义场景的统一信号语义目录。  
-🚀 以 `VSS` 标准主干为基础，通过扩展层承载企业自定义信号与映射规则。  
+🔥 面向智能汽车软件定义场景的统一信号语义目录。
+🚀 以 `VSS` 标准主干为基础，通过扩展层承载企业自定义信号与映射规则。
 ⭐ 覆盖信号建模、版本治理、工件生成、兼容校验与发布流程，支持从车端协议到云端遥测的数据语义对齐。
 
 [![License](https://img.shields.io/badge/License-MPL%202.0-blue.svg)](https://opensource.org/license/MPL-2.0)
@@ -23,6 +23,11 @@
 > Attribution: upstream MPL-2.0 remains in `LICENSE`; fork boundary and redistribution notes are maintained in `LICENSE.HOWEVER` and `NOTICE.md`.
 >
 > Role: standards and signal-governance layer for the autonomous-driving portfolio
+
+> **非官方声明（Non-Affiliation）**<br>
+> 本仓库是基于 `COVESA/vehicle_signal_specification` 的社区维护衍生版，与上游项目、COVESA 及相关权利主体不存在官方关联、授权背书或从属关系。<br>
+> **商标声明（Trademark Notice）**<br>
+> `Vehicle Signal Specification`、`VSS` 及相关项目名称、Logo 与商标归其各自权利人所有；本仓库仅用于说明上游来源、兼容关系与扩展治理边界。
 
 ---
 

@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-EXT_ROOT="spec/extensions/VehicleSignalSpecificationExtensions.vspec"
+EXT_ROOT="spec/VehicleSignalSpecificationExtensions.vspec"
 TMP_DIR=$(mktemp -d)
 trap 'rm -rf "$TMP_DIR"' EXIT
 
