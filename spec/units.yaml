@@ -6,27 +6,27 @@
 mm:
   definition: Length measured in millimeters
   unit: millimeter
-  quantity: distance
+  quantity: length
   allowed-datatypes: ['numeric']
 cm:
   definition: Length measured in centimeters
   unit: centimeter
-  quantity: distance
+  quantity: length
   allowed-datatypes: ['numeric']
 m:
   definition: Length measured in meters
   unit: meter
-  quantity: distance
+  quantity: length
   allowed-datatypes: ['numeric']
 km:
   definition: Length measured in kilometers
   unit: kilometer
-  quantity: distance
+  quantity: length
   allowed-datatypes: ['numeric']
 inch:
   definition: Distance measured in inches
   unit: inch
-  quantity: distance
+  quantity: length
   allowed-datatypes: ['numeric']
 
 # Velocity
