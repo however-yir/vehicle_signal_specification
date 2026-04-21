@@ -1,7 +1,7 @@
 # 车辆信号规范 / Vehicle Signal Specification（标准主干 + 扩展层）
 
-🔥 面向智能汽车软件定义场景的统一信号语义目录。  
-🚀 以 `VSS` 标准主干为基础，通过扩展层承载企业自定义信号与映射规则。  
+🔥 面向智能汽车软件定义场景的统一信号语义目录。
+🚀 以 `VSS` 标准主干为基础，通过扩展层承载企业自定义信号与映射规则。
 ⭐ 覆盖信号建模、版本治理、工件生成、兼容校验与发布流程，支持从车端协议到云端遥测的数据语义对齐。
 
 [![License](https://img.shields.io/badge/License-MPL%202.0-blue.svg)](https://opensource.org/license/MPL-2.0)
