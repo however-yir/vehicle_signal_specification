@@ -19,6 +19,11 @@
 >
 > Role: standards and signal-governance layer for the autonomous-driving portfolio
 
+> **非官方声明（Non-Affiliation）**<br>
+> 本仓库是基于 `COVESA/vehicle_signal_specification` 的社区维护衍生版，与上游项目、COVESA 及相关权利主体不存在官方关联、授权背书或从属关系。<br>
+> **商标声明（Trademark Notice）**<br>
+> `Vehicle Signal Specification`、`VSS` 及相关项目名称、Logo 与商标归其各自权利人所有；本仓库仅用于说明上游来源、兼容关系与扩展治理边界。
+
 ---
 
 ## 目录
